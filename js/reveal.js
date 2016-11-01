@@ -4022,9 +4022,9 @@
 
 			switch( event.keyCode ) {
 				// p, page up
-				case 80: case 33: navigatePrev(); break;
+				case 38: case 33: navigatePrev(); break;
 				// n, page down
-				case 78: case 34: navigateNext(); break;
+				case 40: case 34: navigateNext(); break;
 				// h, left
 				case 72: case 37: navigateLeft(); break;
 				// l, right
