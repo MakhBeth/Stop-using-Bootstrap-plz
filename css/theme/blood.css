@@ -21,6 +21,33 @@ body {
   opacity: 0.8
 }
 
+.reveal cite {
+  background: rgba(255,255,255,0.1);
+  display: block;
+  text-align: left;
+  padding: 1.8em;
+  border: 0.1em solid rgba(255,255,255,0.2);
+  position: relative;
+}
+
+cite:before, cite:after {
+  content: '”';
+  font-family: Helvetica;
+  bottom: 0;
+  right: 0;
+  line-height: 0;
+  font-size: 5em;
+  position: absolute;
+  opacity: 0.1;
+}
+
+cite:before {
+  left: 0;
+  top: 0;
+  line-height: 1;
+  content: '“';
+}
+
 .reveal {
   font-family: 'Serenity', "sans-serif";
   font-size: 42px;

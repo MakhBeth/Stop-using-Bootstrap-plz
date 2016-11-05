@@ -1,340 +1,658 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Stop using Bootstrap plz!</title>
+    <title>Stop using Bootstrap plz!</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/blood.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<script src="https://use.typekit.net/oem4oyl.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="https://use.typekit.net/oem4oyl.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-				<section style="position: static;">
-					<h1>Stop using Bootstrap PLZ!</h1>
-					<div style="display: block; justify-content: center;">
-						<div style="width: 40%; margin: 3rem auto -2rem">
-			        <object type="image/svg+xml" data="images/codemotion.svg">
-							  Codemotion Logo
-							</object>
-						</div>
-				    <p>
-				        November 25th 2016
-						</p>
-						<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.it" target="_blank" style="position: absolute; right: -1%; bottom: -14%; width: 20%;"><img src="images/cc.logo.white.svg" class="plain" /></a>
-					</div>
-				</section>
+        <section style="position: static;">
+          <h1>Stop using Bootstrap PLZ!</h1>
+          <div style="display: block; justify-content: center;">
+            <div style="width: 40%; margin: 3rem auto -2rem">
+              <object type="image/svg+xml" data="images/codemotion.svg">
+                Codemotion Logo
+              </object>
+            </div>
+            <p>
+                November 25th 2016
+            </p>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.it" target="_blank" style="position: absolute; right: -1%; bottom: -14%; width: 20%;"><img src="images/cc.logo.white.svg" class="plain" /></a>
+          </div>
+        </section>
 
-				<section>
-					<section>
-						<h1>Who am I?</h1>
-					</section>
-					<section>
-						<div style="display: flex; justify-content: center; align-items: center;">
-							<div style="margin-right: 5%; width: 33%;">
-				        <img style="max-height: 75vh;" src="images/me.svg" alt="me" class="plain"/>
-							</div>
-					    <div>
-					    		<h2>Davide Di Pumpo</h2>
-					        <ul style="width: 100%;">
-					        	<li>Creative Technologist</li>
-					        	<li>Digital Architect at
-					        		<a href="http://www.objectway.it" target="_blank">Objectway</a>
-					        	</li>
-					        	<li>Co-organizer
-					        		<a href="http://www.meetup.com/it-IT/milano-front-end/" target="_blank">Milano Frontend</a>
-					        	</li>
-					        	<li><strong>MakhBeth</strong> on:
-					        		<a href="https://twitter.com/makhbeth" target="_blank">Twitter</a>,
-					        		<a href="https://github.com/MakhBeth" target="_blank">Github</a>,
-					        		<a href="https://www.google.it/search?q=MakhBeth" target="_blank">Internet</a></li>
-					        	<li>
-					        		I like Cats, Drink, Comics and Videogames...
-					        	</li>
-					        </ul>
-							</div>
-						</div>
+        <section>
+          <section>
+            <h1>Who am I?</h1>
+          </section>
+          <section>
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <div style="margin-right: 5%; width: 33%;">
+                <img style="max-height: 75vh;" src="images/me.svg" alt="me" class="plain"/>
+              </div>
+              <div>
+                  <h2>Davide Di Pumpo</h2>
+                  <ul style="width: 100%;">
+                    <li>Creative Technologist</li>
+                    <li>Digital Architect at
+                      <a href="http://www.objectway.it" target="_blank">Objectway</a>
+                    </li>
+                    <li>Co-organizer
+                      <a href="http://www.meetup.com/it-IT/milano-front-end/" target="_blank">Milano Frontend</a>
+                    </li>
+                    <li><strong>MakhBeth</strong> on:
+                      <a href="https://twitter.com/makhbeth" target="_blank">Twitter</a>,
+                      <a href="https://github.com/MakhBeth" target="_blank">Github</a>,
+                      <a href="https://www.google.it/search?q=MakhBeth" target="_blank">Internet</a></li>
+                    <li>
+                      I like Cats, Drink, Comics and Videogames...
+                    </li>
+                  </ul>
+              </div>
+            </div>
 
-					</section>
-					<section>
-						<h2>Let's start Meaow!</h2>
-						<img src="images/gamercat.jpg" alt="gamercat" />
-					</section>
-				</section>
+          </section>
+          <section>
+            <h2>Let's start Meaow!</h2>
+            <img src="images/gamercat.jpg" alt="gamercat" />
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Prologue
-						<h1>Survey Time!!!</h1>
-					</section>
-					<section>
-						<strong>Do you use Bootstrap?</strong>
-						<div class="fragment">Do you use it because it's simple?</div>
-						<div class="fragment">Do you use it because it's fast?</div>
-					</section>
-					<section>
-						<h2>Do you like sushi?</h2>
-						<img class="" src="images/sushi.jpg" alt="sushi">
-					</section>
-					<section>
-						<h2>Some of you, will hate me!</h2>
-						<img class="fragment" src="images/grumpy.jpg" alt="grumpy">
-					</section>
-					<section>
-						<h2>Why do I do that?</h2>
-					</section>
-					<section>
-						<h2>Do you remember the sushi slide before?</h2>
-						<img class="fragment" src="images/sushi.jpg" alt="sushi">
-					</section>
-				</section>
+        <section>
+          <section>
+            Prologue
+            <h1>Survey Time!!!</h1>
+          </section>
+          <section>
+            <strong>Do you use Bootstrap?</strong>
+            <div class="fragment">Do you use it because it's simple?</div>
+            <div class="fragment">Do you use it because it's fast?</div>
+          </section>
+          <section>
+            <h2>Do you like sushi?</h2>
+            <img class="" src="images/sushi.jpg" alt="sushi">
+          </section>
+          <section>
+            <h2>Some of you, will hate me!</h2>
+            <img class="fragment" src="images/grumpy.jpg" alt="grumpy">
+          </section>
+          <section>
+            <h2>Why do I do that?</h2>
+          </section>
+          <section>
+            <h2>Do you remember the sushi slide before?</h2>
+            <img class="fragment" src="images/sushi.jpg" alt="sushi">
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Chapter 01
-						<h1>Old Wide Web</h1>
-						<img src="images/wildcat.jpg">
-					</section>
-					<section>
-						<h3>Or not so old?</h3>
-					</section>
-					<section>
-						<p>It was only 5 years ago</p>
-					</section>
-					<section>
-						There was nightmares out there!
-						<br>
-						<img src="images/explorer6.png">
-					</section>
-				</section>
+        <section>
+          <section>
+            Chapter 01
+            <h1>Old Wide Web</h1>
+            <img src="images/wildcat.jpg">
+          </section>
+          <section>
+            <h3>Or not so old?</h3>
+          </section>
+          <section>
+            <p>It was only 5 years ago</p>
+          </section>
+          <section>
+            There was nightmares out there!
+            <br>
+            <img src="images/explorer6.png">
+          </section>
+          <section>
+            <h2>Twitter blueprint and so on</h2>
+          </section>
+          <section>
+            <h3>Does Twitter use Twitter Bootstrap?</h3>
+            <div class="fragment">
+              <cite>Internally, we use it in a lot of applications. On Twitter.com, you can find bits and pieces in our dropdown menus, forms, and buttons.</cite>
+              <a style="display: block; text-align: right;" href="https://www.quora.com/Bootstrap-CSS-Frameworks/Does-Twitter-use-Twitter-Bootstrap" target="_blank">Mark Otto, creator of Bootstrap</a>
+            </div>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Chapter 02
-						<h1>Me and the Bootstrap</h1>
-					</section>
-					<section>
-						<h1>Love!</h1>
-						<img src="images/love.jpg" style="max-height: 60vh;">
-					</section>
-					<section>
-						But I had a lover
-						<br>
-						<br>
-						<img src="images/sasslogo.png" class="plain">
-					</section>
-					<section>
-						Maybe two...
-						<br>
-						<img src="images/foundation.png" class="plain">
-					</section>
-					<section>
-						But this ended all:
-						<h1 class="fragment">FLEXBOX</h1>
-					</section>
-					<section>
-						<p>
-							Why not only be friends?
-							<br>
-							<img src="images/friendzone.png">
-						</p>
-					</section>
-					<section>
-						<p>
-							And I started to question my self
-						</p>
-					</section>
-				</section>
+        <section>
+          <section>
+            Chapter 02
+            <h1>Me and the Bootstrap</h1>
+          </section>
+          <section>
+            <h1>Love!</h1>
+            <img src="images/love.jpg" style="max-height: 60vh;">
+          </section>
+          <section>
+            But I had a lover
+            <br>
+            <br>
+            <img src="images/sasslogo.png" class="plain">
+          </section>
+          <section>
+            Maybe two...
+            <br>
+            <img src="images/foundation.png" class="plain">
+          </section>
+          <section>
+            But this ended all:
+            <h1 class="fragment">FLEXBOX</h1>
+          </section>
+          <section>
+            <p>
+              Why not only be friends?
+              <br>
+              <img src="images/friendzone.png">
+            </p>
+          </section>
+          <section>
+            <p>
+              And I started to question my self
+            </p>
+          </section>
+        </section>
 
 
-				<section>
-					<section>
-						Chapter 3
-						<h1>Javascript</h1>
-					</section>
-					<section>
-						<h2 style="text-align: left;">Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled</h2>
-						<p style="float: right;">Bootstrap Documentation</span>
-					</section>
-					<section>
-						<p>Beautiful enhancement? What?</p>
-					</section>
-					<section style="text-align: left;">
-						<h3>Everyone uses javscript today!</h3>
-						<p class="fragment">less ~1%</p>
-						<div class="fragment">More than explorer 9 or 10 BTW...</div>
-						<small class="fragment" style="float: right">Source StatCounter</small>
-					</section>
-					<section>
-						<h2>JQuery?</h2>
-					</section>
-					<section>
-						<h2>Angular, React, Vue?</h2>
-					</section>
-				</section>
+        <section>
+          <section>
+            Chapter 3
+            <h1>Javascript</h1>
+          </section>
+          <section>
+            <cite style="font-size: 3rem;">Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled</cite>
+            <a style="float: right;" href="http://getbootstrap.com/javascript/#js-disabled" target="_blank">Bootstrap Documentation</a>
+          </section>
+          <section>
+            <p>Beautiful enhancement? What?</p>
+          </section>
+          <section style="text-align: left;">
+            <h3>Everyone uses javscript today!</h3>
+            <p class="fragment">less ~1%</p>
+            <div class="fragment">More than explorer 9 or 10 BTW...</div>
+            <small class="fragment" style="float: right">Source StatCounter</small>
+          </section>
+          <section>
+            <h2>JQuery?</h2>
+          </section>
+          <section>
+            <h2>Angular, React, Vue?</h2>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Chapter 4
-						<h1>CSS</h1>
-					</section>
-					<section>
-						<h2>Heavy?</h2>
-						<p>
-							We start with <code>142.6KB</code> or <code>20.8KB</code> gzipped
-						</p>
-					</section>
-					<section>
-						<p>Useless classes</p>
-						<div class="fragment">
-							<code>.col-xs-1</code>?
-						</div>
-					</section>
-					<section>
-						<h2>What about Uncss?</h2>
-					</section>
-					<section>
-						<h2>Based on float...</h2>
-						<img src="images/catfloat.jpg" alt="cat float" />
-					</section>
-					<section>
-						<p>
-							What about vertical align? Holy Grail layout?
-						</p>
-						<img src="images/holygrail.png">
-					</section>
-					<section>
-						<p>Even <code>display: table;</code> is better</p>
-						<a href="http://colintoh.com/blog/display-table-anti-hero" target="_blank">Seriously...</a>
-					</section>
-					<section style="text-align: left;">
-						<p>
-							Ok, there is an alpha with flexbox option...
-						</p>
-						<p class="fragment">
-							But it doesn't have fallbacks...
-						</p>
-						<p class="fragment">
-							And Css-grid is near...
-						</p>
-					</section>
-					<section>
-						<img src="images/cssgrid.png">
-					</section>
-					<section>
-						<h1>Mediaquery</h1>
-					</section>
-					<section>
-						<h2>4 breakpoints, based on DEVICE?</h2>
-					</section>					<section>
-						<h2>Specificity</h2>
-						<br>
-						<pre style="font-size: 2rem"><code>
+        <section>
+          <section>
+            Chapter 4
+            <h1>CSS</h1>
+          </section>
+          <section>
+            <h2>Heavy?</h2>
+            <p>
+              We start with <code>142.6KB</code> or <code>20.8KB</code> gzipped
+            </p>
+          </section>
+          <section>
+            <p>Useless classes</p>
+            <div class="fragment">
+              <code>.col-xs-1</code>?
+            </div>
+          </section>
+          <section>
+            <h2>What about Uncss?</h2>
+          </section>
+          <section>
+            <h2>Based on float...</h2>
+            <img src="images/catfloat.jpg" alt="cat float" />
+          </section>
+          <section>
+            <p>
+              What about vertical align? Holy Grail layout?
+            </p>
+            <img src="images/holygrail.png">
+          </section>
+          <section>
+            <p>Even <code>display: table;</code> is better</p>
+            <a href="http://colintoh.com/blog/display-table-anti-hero" target="_blank">Seriously...</a>
+          </section>
+          <section style="text-align: left;">
+            <p>
+              Ok, there is an alpha with flexbox option...
+            </p>
+            <p class="fragment">
+              But it doesn't have fallbacks...
+            </p>
+            <p class="fragment">
+              And Css-grid is near...
+            </p>
+          </section>
+          <section>
+            <img src="images/cssgrid.png">
+          </section>
+          <section>
+            <h1>Mediaquery</h1>
+          </section>
+          <section>
+            <h2>4 breakpoints, based on DEVICE?</h2>
+          </section>          <section>
+            <h2>Specificity</h2>
+            <br>
+            <pre style="font-size: 2rem"><code>
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
   border-top-right-radius: 3px;
 }
-							</code></pre>
-					</section>
-				</section>
+              </code></pre>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Chapter 5
-						<h1>HTML</h1>
-					</section>
-					<section>
-						<p>Do you have problem even with that?</p>
-					</section>
-					<section>
-						<pre style="font-size: 2rem" class="html"><code>
+        <section>
+          <section>
+            Chapter 5
+            <h1>HTML</h1>
+          </section>
+          <section>
+            <p>Do you have problem even with that?</p>
+          </section>
+          <section>
+            <pre style="font-size: 2rem" class="html"><code>
 &lt;div class=&quot;col-sm-6 col-md-5
   col-md-offset-2 col-lg-6 col-lg-offset-0&quot;&gt;
-						</code></pre>
-						<a style="float: right; padding-right: 2.5rem;" class="fragment" target="_blank"
-						href="http://getbootstrap.com/css/#grid-responsive-resets">Bootstrap documentation</a>
-					</section>
+            </code></pre>
+            <a style="float: right; padding-right: 2.5rem;" class="fragment" target="_blank"
+            href="http://getbootstrap.com/css/#grid-responsive-resets">Bootstrap documentation</a>
+          </section>
 
-					<section>
-						<h2>Separation of concerns</h2>
-						<a style="float: right; padding-right: 2.5rem;" target="_blank"
-						href="http://www.w3.org/TR/html-design-principles/#separation-of-concerns">W3C</a>
-					</section>
+          <section>
+            <h2>Separation of concerns</h2>
+            <a style="text-align: right; display: block; padding-right: 2.5rem;" target="_blank"
+            href="http://www.w3.org/TR/html-design-principles/#separation-of-concerns">W3C</a>
+            <div class="fragment" style="text-align: left">
+            Do you remember: <a href="http://csszengarden.com" target="_blank">CSS Zen Garden</a>?</div>
+          </section>
 
-					<section>
-						<h2>Yeah, but in real life?</h2>
-						<img src="images/reallife.jpg" alt="cat real life">
-					</section>
+          <section>
+            <h2>Yeah, but in real life?</h2>
+            <img src="images/reallife.jpg" alt="cat real life">
+          </section>
 
-					<section style="text-align: left;">
-						<h2>You can have:</h2>
-						<p>
-							<ul style="font-size: 4rem">
-								<li class="fragment">Difficulties to reuse code</li>
-								<li class="fragment">Difficulties to temify</li>
-								<li class="fragment">Meaningless classes</li>
-								<li class="fragment">Specifity nightmares <code class="fragment">!important</code></li>
-							</ul>
-						</p>
+          <section style="text-align: left;">
+            <h2>You can have:</h2>
+            <p>
+              <ul style="font-size: 4rem">
+                <li class="fragment">Difficulties to reuse code</li>
+                <li class="fragment">Difficulties to temify</li>
+                <li class="fragment">Meaningless classes</li>
+                <li class="fragment">Specifity nightmares <code class="fragment">!important</code></li>
+              </ul>
+            </p>
 
-					</section>
-				</section>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						Chapter BOH+
-						<h1>False Myths</h1>
-						<img src="images/catback.gif">
-					</section>
-					<section>
-						Myth:
-						<h1>It's fast</h1>
-						<h2 class="fragment"><a href="#">For who?</a></h2>
-						<p class="fragment">Let's say for developers</p>
-					</section>
-					<section>
-						<h2>Technical Debt</h2>
-						<p class="cit">"a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution"</p>
-						<p style="text-align: right;">
-							<a href="https://en.wikipedia.org/wiki/Technical_debt">Wikipedia</a>
-						</p>
-					</section>
-				</section>
-			</div>
-		</div>
+        <section>
+          <section>
+            Chapter 6
+            <h1>Preprocessor</h1>
+          </section>
+          <section>
+            <p>Using Bootstrap via preprocessor is a lot better</p>
+          </section>
+          <section>
+            <pre style="font-size: 2.5rem"><code class="scss">
+.author-nameLast {
+  @extend .col-md-4;
+}
+            </code></pre>
+            <span class="fragment">or</span>
+            <pre style="font-size: 2.5rem" class="fragment"><code class="scss">
+.author-nameLast {
+  @include make-md-column(4);
+}
+            </code></pre>
+          </section>
+          <section>
+            <h1>BUT...</h1>
+          </section>
+          <section>
+            <h2>@extend</h2>
+            <cite> Extending is invisible. Extending doesn’t necessarily help file weight, contrary to the saying. Extending doesn’t work across media queries. Extending is not flexible. Mixins have absolutely no drawback.</cite>
+            <a href="https://www.sitepoint.com/avoid-sass-extend/" target="_blank" style="float: right;">Hugo Giraudel</a>
+          </section>
+          <section>
+            <h2>@mixins</h2>
+            <pre style="font-size: 2.5rem"><code class="scss">
+  .author-nameLast {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(4);
+    @include make-lg-column(3);
+  }
+            </code></pre>
+          </section>
+          <section>
+            <h2>@mixins2</h2>
+            <pre style="font-size: 2rem"><code class="scss">
+@mixin nav-divider($color: #e5e5e5) {
+  height: 1px;
+  margin: (($line-height-computed / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+            </code></pre>
+          </section>
+          <section>
+            <pre><code class="css">
+// Pagination
+@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  &gt; li {
+    &gt; a,
+    &gt; span {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+    &amp;:first-child {
+      &gt; a,
+      &gt; span {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &amp;:last-child {
+      &gt; a,
+      &gt; span {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
+            </code></pre>
+          </section>
+          <section>
+            <img src="images/whatcat.jpg" alt="whatcat" />
+          </section>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+          <section>
+            Chapter 7
+            <h1>Design</h1>
+          </section>
+          <section style="text-align: left;">
+            <h2>Websites</h2>
+            <p><ul style="font-size: 1.2em">
+              <li class="fragment">Large scale e-commerce and news websites</li>
+              <li class="fragment">Apps with components reused in different places</li>
+              <li class="fragment">A lot of page types and may need redesign</li>
+              <li class="fragment">Promo sites and landing pages</li>
+            </ul></p>
+          </section>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+          <section style="text-align: left">
+            <h3>Large e-commerce</h3>
+            <p>The conversion rate is related to the design of a product page </p>
+            <hr>
+            With bootstrap is difficult to delivery two different version of a page, or test if a change break something in minor sub pages
+          </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+          <section style="text-align: left">
+            <h3>App build with components</h3>
+            <p>It's important to reuse atomic designed component</p>
+            <hr>
+            With bootstrap is difficult to put content in tag based component.
+            Try to put a <code>ul</code> based dropdown inside Bootstrap's navigation
+          </section>
+
+          <section style="text-align: left">
+            <h3>News websites</h3>
+            <p>You may need to redesign subpages</p>
+            <hr>
+            You have changed the font size of <code>h1</code> and <code>h2</code>. And now you need to check more than a hundred of pages to ensure nothing has gone wrong, and everything is in its place!
+          </section>
+
+          <section style="text-align: left">
+            <h3>Landing page</h3>
+            <p>Simple heading, ctas, hero panels and forms</p>
+            <hr>
+            Instead of speeding up your work, you will be losing time in a fight with different Bootstrap side effects.
+          </section>
+
+          <section>Talking about simple visual</section>
+
+          <section data-background="images/everyf.png"></section>
+          <section>
+            <p>
+              <a href="http://adventurega.me/bootstrap/#" target="_blank">EVERY BOOTSTRAP WEBSITE EVER</a>
+            </p>
+          </section>
+          <section>
+            <cite>So, yeah, there's a reason why a lot of websites look like this. Because it works.</cite>
+          </section>
+
+          <section>
+            <img src="images/areyousure.png" alt="are you sure?" />
+          </section>
+
+          <section>
+            <p>
+              Burger button can HALVE conversion rate!
+              <a href="http://thenextweb.com/dd/2014/04/08/ux-designers-side-drawer-navigation-costing-half-user-engagement/" target="_blank" style="float: right; display: block">Source</a>
+            </p>
+          </section>
+          <section>
+            <img src="images/ham1.png">
+          </section>
+
+          <section>
+            <img src="images/ham2.png">
+          </section>
+
+          <section>
+            <img src="images/ham3.png">
+          </section>
+
+          <section>
+            <img src="images/ham4.png">
+          </section>
+
+          <section>
+            <h2>What about carousel?</h2>
+            <img src="images/carousel.gif" alt="cats" />
+          </section>
+
+          <section>
+            <cite>1% clicked a feature. Of those, 89% were the first position. 1% of clicks for the most significant object on the home page?</cite>
+            <a style="display: block; text-align: right;" href="https://erikrunyon.com/2013/07/carousel-interaction-stats/" target="_blank">Source</a>
+          </section>
+
+          <section>
+            <p>Yeah, but I change every single aspect of Bootstrap!</p>
+          </section>
+
+          <section>
+            Ok, why don't use something less bloated?
+            <br>
+            <img src="images/bloated.jpg" alt="blated cat" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            Chapter 8
+            <h1>Accessibility</h1>
+          </section>
+          <section>
+            <img src="images/nope.jpg" />
+          </section>
+          <section>
+            Please use <a href="https://paypal.github.io/bootstrap-accessibility-plugin/" target="_blank">THIS</a>!
+          </section>
+          <section>
+            and <a href="https://www.sitepoint.com/making-bootstrap-accessible/" target="_blank">read about colors</a>!
+          </section>
+        </section>
+
+        <section>
+          <section>
+            Chapter 9
+            <h2>Remember me why I use Bootstrap</h2>
+            or how to avoid false myths. <br>
+            <img src="images/catback.gif">
+          </section>
+          <section>
+            <h1>It's fast</h1>
+            <h2 class="fragment"><a href="#">For who?</a></h2>
+            <p class="fragment">Let's say for developers</p>
+          </section>
+          <section>
+            <h2>Technical Debt</h2>
+            <p class="cit">"a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution"</p>
+            <p style="text-align: right;">
+              <a href="https://en.wikipedia.org/wiki/Technical_debt">Wikipedia</a>
+            </p>
+          </section>
+
+          <section>
+            <h1>It's a sort of standard</h1>
+            <h2 class="fragment"><a href="#">Seriously?</a></h2>
+          </section>
+
+          <section>
+            Yeah, like Flash, table websites, geocities...
+          </section>
+
+          <section>
+            <h1>It's a good start for interns</h1>
+            <h2 class="fragment"><a href="#">Oh, come on...</a></h2>
+          </section>
+
+          <section>
+            Is a good idea to learn CSS without see that? <br>
+            Maybe you want them to lern OOCSS anti pattern?
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            Chapter 10
+            <h1>The last reason</h1>
+          </section>
+          <section>
+            <cite><h2>C'ha rotto er *****</h2></cite>
+            <a style="display: block; text-align: right;" href="https://twitter.com/DBertella" target="_blank">@dbertella</a>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <img src="images/thankyou.jpg" alt="thank you" />
+          </section>
+
+          <section>
+            <h2>Insights and Bibliography</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li>
+                <a href="http://fourkitchens.com/blog/article/you-dont-need-bootstrap" target="_blank">
+                  Article: You don't need bootstrap
+                </a>
+              </li>
+              <li>
+                <a href="http://www.matthewcopeland.me/blog/2013/11/04/bootstrap-bankruptcy/" target="_blank">
+                  Bootstrap Bankruptcy
+                </a>
+              </li>
+              <li>
+                <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html" target="_blank">
+                  Stop embedding bootstrap classes
+                </a>
+              </li>
+              <li>
+                <a href="https://evilmartians.com/chronicles/bootstrap-an-intervention" target="_blank">
+                  Bootstrap an intervantion
+                </a>
+              </li>
+              <li>
+                <a href="https://benfrain.com/oocss-atomic-css-responsive-web-design-anti-pattern/" target="_blank">
+                  OOCSS is an anti-pattern
+                </a>
+              </li>
+              <li>
+                <a href="http://www.idyllic-software.com/brlog/why-we-dont-use-twitter-bootstrap/" target="_blank">
+                  Why we don't use Bootstrap
+                </a>
+              </li>
+              <li>
+                <a href="http://alanstevens.io/blog/bootstrap-youre-doing-it-wrong/" target="_blank">
+                  Bootstrap you're doing it wrong
+                </a>
+              </li>
+              <li>
+                <a href="http://www.punkchip.com/why-dont-you-use-bootstrap/" target="_blank">
+                  Why don’t you use Bootstrap?
+                </a>
+              </li>
+              <li>
+                <a href="http://jamesarcher.me/hamburger-menu" target="_blank">
+                  The hamburger menu doesn't work
+                </a>
+              </li>
+              <li>
+                <a href="http://shouldiuseacarousel.com" target="_blank">
+                  Should I use a carousel?
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/angular-ui/bootstrap/issues/4772" target="_blank">
+                  Bootstrap accessibility issue
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
 </html>
