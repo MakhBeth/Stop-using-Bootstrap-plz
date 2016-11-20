@@ -340,3 +340,15 @@ cite:before {
 
 .reveal small code {
   vertical-align: baseline; }
+
+.nope {
+  color: #e74c3c;
+}
+
+.maybe {
+  color: #f1c40f;
+}
+
+.yes {
+  color: #27ae60;
+}
