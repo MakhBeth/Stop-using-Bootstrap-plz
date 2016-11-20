@@ -9,6 +9,7 @@
  * For other themes, change $codeBackground accordingly.
  *
  */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -16,41 +17,9 @@ body {
   background: #222;
   background-color: #222; }
 
-.cit {
-  text-align: left;
-  opacity: 0.8
-}
-
-.reveal cite {
-  background: rgba(255,255,255,0.1);
-  display: block;
-  text-align: left;
-  padding: 1.8em;
-  border: 0.1em solid rgba(255,255,255,0.2);
-  position: relative;
-}
-
-cite:before, cite:after {
-  content: '”';
-  font-family: Helvetica;
-  bottom: 0;
-  right: 0;
-  line-height: 0;
-  font-size: 5em;
-  position: absolute;
-  opacity: 0.1;
-}
-
-cite:before {
-  left: 0;
-  top: 0;
-  line-height: 1;
-  content: '“';
-}
-
 .reveal {
-  font-family: 'Serenity', "sans-serif";
-  font-size: 42px;
+  font-family: Ubuntu, "sans-serif";
+  font-size: 36px;
   font-weight: normal;
   color: #eee; }
 
@@ -75,10 +44,12 @@ cite:before {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee;
-  font-family: 'Lobster', "sans-serif";
+  font-family: Ubuntu, "sans-serif";
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #222;
   word-wrap: break-word; }
 
 .reveal h1 {
@@ -94,14 +65,12 @@ cite:before {
   font-size: 1em; }
 
 .reveal h1 {
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
-}
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
-  font-size: 1.3em;
   margin: 20px 0;
   line-height: 1.3; }
 
@@ -265,8 +234,7 @@ cite:before {
 
 .reveal section img.plain {
   border: 0;
-  box-shadow: none;
-  background: none;}
+  box-shadow: none; }
 
 .reveal a img {
   -webkit-transition: all .15s linear;
@@ -340,15 +308,3 @@ cite:before {
 
 .reveal small code {
   vertical-align: baseline; }
-
-.nope {
-  color: #e74c3c;
-}
-
-.maybe {
-  color: #f1c40f;
-}
-
-.yes {
-  color: #27ae60;
-}
