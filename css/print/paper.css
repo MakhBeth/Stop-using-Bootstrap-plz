@@ -13,13 +13,13 @@
 	   beyond the edge of the printed page, and prevents
 	   unnecessary background images from printing */
 	html {
-		background: #222;
+		background: #fff;
 		width: auto;
 		height: auto;
 		overflow: visible;
 	}
 	body {
-		background: #222;
+		background: #fff;
 		font-size: 20pt;
 		width: auto;
 		height: auto;
