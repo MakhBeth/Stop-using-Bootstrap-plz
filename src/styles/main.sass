@@ -1,0 +1,449 @@
+// -----------------------------------------------------------------------------
+// FILES ORGANIZATION BASED ON http://itcss.io
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// SETTINGS - Variables and configurations
+// -----------------------------------------------------------------------------
+@import 'super-gigi/dist/helpers/functions'
+
+// -----------------------------------------------------------------------------
+// TOOLS - Mixins and functions not used in configuration
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// GENERIC - normalizer, reset and ground-zero style
+// -----------------------------------------------------------------------------
+@import './3-generic/normalize'
+
+// -----------------------------------------------------------------------------
+// BASE - fonts, partials, generic helpers and plugins functional style
+// -----------------------------------------------------------------------------
+@import './4-base/partials/icons'
+@import './4-base/partials/sprites'
+
+// -----------------------------------------------------------------------------
+// OBJECTS - First placeholder and after all the block objects
+// -----------------------------------------------------------------------------
+
+@import 'impress.scss'
+// -----------------------------------------------------------------------------
+// COMPONENTS - Widgets, layout chunks and so on
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// TRUMPS - Tacconi will go here
+// -----------------------------------------------------------------------------
+// 
+// .impress-enabled
+//   .step
+//     opacity: 0
+//     &.active
+//       opacity: 1
+.step
+  font-family: 'Helvetica'
+  text-align: center
+
+  h1
+    color: #B81704
+
+
+.active ~ .step
+  opacity: 0
+
+
+.twitter
+  background: radial-gradient(darken(#1DA1F2, 1), rgba(#1DA1F2, 0), rgba(#1DA1F2, 0))
+  position: relative
+  color: white
+  background-size: 0
+  transition: background 500ms 1500ms
+  padding-left: 30vw
+  width: 100vw
+  height: 100vh
+  text-align: left
+  display: flex
+  align-items: center
+
+  &.active
+    background-size: cover
+
+  &::before
+    background: url('../images/twitter.svg')
+    background-repeat: no-repeat
+    background-position: 5vw center
+    background-size: 20vw
+    width: 100%
+    height: 100%
+    position: absolute
+    content: ''
+    display: block
+    left: 0
+    z-index: -1
+
+.twitterCit
+  float: right
+  margin-top: 1rem
+  font-size: 2rem
+  text-shadow: none
+  padding: 0.3em
+  color: #1DA1F2
+  background: white
+
+.impress-on-StephenHay,
+.impress-on-MrkBolton,
+.impress-on-Alla,
+.impress-on-Boss-0,
+.impress-on-Saul,
+.impress-on-Paul
+  background: darken(#1DA1F2, 10)
+
+body
+  color: #444
+  font-family: 'Helvetica', sans-serif
+  font-weight: 100
+  transition: background 500ms 300ms
+  font-size: 300px
+
+  @media screen and (max-width: 1024px)
+    font-size: 10px
+
+#title
+  background-image: url('../images/intro.svg')
+  height: 120vh
+  width: 110vw
+  background-repeat: no-repeat
+  background-position: center center
+
+#whoami
+  background: radial-gradient(#DC5638, rgba(#DC5638, 0), rgba(#DC5638, 0))
+  width: 100vw
+  opacity: 0
+  &.active
+    opacity: 1
+  .cont
+    display: flex
+    justify-content: center
+    align-items: center
+  .text
+    text-align: left
+    padding-left: 5rem
+    color: white
+    h1
+      padding-bottom: 2rem
+      color: #fff
+    ul
+      font-size: 2rem
+      list-style: circle
+      li
+        padding: 10px 0
+  .me
+    text-align: center
+    img
+      min-height: 100vh
+      min-width: 20vw
+.impress-on-whoami
+  background: darken(#DC5638, 15)
+
+
+#letstart
+  background-image: url('../images/start.svg'), radial-gradient(#1689C9, rgba(#DC5638, 0))
+  height: 110vh
+  width: 120vw
+  background-repeat: no-repeat
+  background-position: right center
+  opacity: 0
+  max-width: 98vw
+  margin-top: 10vw
+  &.active
+    opacity: 1
+.impress-on-letstart
+  background: darken(#1689C9, 35)
+
+#beginning,
+#beginning2
+  text-align: center
+  .text
+    font-size: 3rem
+  .cit
+    font-size: 2rem
+    text-align: right
+    opacity: 0
+    transition: opacity 300ms 3000ms
+  &.active .cit
+    opacity: 1
+  .word
+    display: inline-block
+    position: relative
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 0%
+      height: 3px
+      background: black
+      border: 0px solid black
+      top: 50%
+  .page
+    opacity: 0
+  .almost
+    opacity: 0
+
+#beginning2
+  opacity: 0
+  .cit
+    opacity: 1
+  &.active
+    opacity: 1
+    .word::after
+      width: 100%
+      border-width: 1px
+      transition: all 500ms
+    .page
+      opacity: 1
+      transition: opacity 1s 1s
+    .almost
+      opacity: 1
+      transition: opacity 1s 1s
+
+#Tim
+  text-align: center
+  h1
+    font-size: 4rem
+    color: #B81704
+    margin-bottom: 2rem
+  p
+    font-size: 2rem
+  strong
+    color: #B81704
+
+#floppy img
+  max-width: 80vh
+
+#beyond
+  opacity: 0
+  &.active
+    opacity: 1
+  h1
+    font-size: 5rem
+
+#web2
+  text-align: left
+
+@keyframes rotation
+  0%
+    transform: rotate(359deg)
+  100%
+    transform: rotate(0)
+
+#loop
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  background: radial-gradient(lighten(#DC5638, 5), rgba(#DC5638, 0), rgba(#DC5638, 0))
+  &.active
+    opacity: 1
+  h1
+    color: black
+  .cont
+    position: relative
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+  &.active .cont
+    &::before
+      content: ''
+      display: block
+      animation: rotation infinite 50000ms linear
+      background: url('../images/vertigo.svg')
+      height: 250vh
+      width: 250vw
+      position: absolute
+      z-index: -1
+      background-position: center center
+      background-repeat: no-repeat
+
+
+.impress-on-loop
+  background: darken(#DC5638, 15)
+
+#designpage
+  opacity: 0
+  &.active
+    opacity: 1
+  h1
+    font-size: 8rem
+
+#rescue
+  width: 100vw
+  height: 100vh
+  position: relative
+  opacity: 0
+  &.active
+    opacity: 1
+  &::after
+    content: ''
+    display: block
+    width: 140%
+    height: 130%
+    background: url('../images/rescue.svg'), radial-gradient(lighten(#D63D13, 10), #D63D13, darken(#D63D13, 5))
+    background-color: #D63D13
+    background-position: center
+    background-repeat: no-repeat
+    left: -10%
+    top: -20%
+    position: absolute
+.impress-on-rescue
+  background: darken(#D63D13, 5)
+
+#everything2
+  opacity: 0
+  font-size: 2.4rem
+  &.active
+    opacity: 1
+
+#anathomy
+  background: transparent
+  width: 100vw
+  height: 100vh
+  opacity: 0
+  transition: all 1s 1s
+  &.active
+    opacity: 1
+    background: url('../images/anathomy.svg'), radial-gradient(darken(#EC0C19, 10), darken(#EC0C19, 1), #EC0C19)
+    background-position: center
+    background-repeat: no-repeat
+.impress-on-anathomy
+  background: #EC0C19
+
+#murder
+  h1:first-of-type
+    color: black
+  h1 + h1
+    font-size: 8rem
+
+#atomic h1
+  color: #BE6700
+
+// #atomic-image
+//   opacity: 0
+//   &.active
+//     opacity: 1
+
+.step[id^="atomic-example"]
+  opacity: 0
+  width: 100vw
+  background: #F4F2DB
+  &.active
+    opacity: 1
+
+  img
+    max-height: 100vh
+
+body[class*="impress-on-atomic-example"]
+  background: #F4F2DB
+
+
+.step[id^="cases"]
+  position: relative
+  background: #E99A23
+  transition: none
+  height: 100vh
+  width: 100vw
+  img
+    height: 100vh
+    &:last-child
+      position: relative
+      margin-left: -15%
+      z-index: -1
+      margin-top: 0
+      transition: margin 3s
+      position: absolute
+  h1
+    position: absolute
+    bottom: 0%
+    font-size: 2.5rem
+    color: darken(#4F5146, 5%)
+    text-align: right
+    width: 50%
+    opacity: 0
+    transition: all 500ms 300ms
+    line-height: 1.4
+    padding-left: 10%
+
+#cases-1.step.active
+  img:last-child
+    margin-top: -300vh
+  h1
+    opacity: 1
+    line-height: 1.2
+    bottom: 10%
+
+#cases-2.step.active
+  height: 100vh
+  width: 100vw
+  img
+    position: absolute
+    top: 0
+    right: 10%
+  h1
+    opacity: 1
+    line-height: 1.2
+    bottom: 10%
+
+body[class*="impress-on-cases"]
+  background: #E99A23
+
+.step[id^="rules-"]
+  height: 100vh
+  width: 100vw
+
+#scratch-3,
+#scratch-4
+  margin-top: 10vh
+  width: 100vw
+  height: 100vh
+  h1
+    font-size: 16rem
+  h1:first-child
+    color: black
+    font-size: 2rem
+
+#scratch-5
+  font-size: 5rem
+
+#scratch-6
+  strong
+    color: black
+
+#WhatPresent strong
+  color: black
+  display: block
+  font-size: 1.6em
+
+#wireframes img,
+#guidelines img
+  max-height: 80vh
+
+#styletile img
+  max-height: 40vh
+
+#Boss img
+  max-height: 90vh
+.impress-on-Boss
+  background: #FC521F
+
+#Boss-3
+  li
+    margin-top: 0.3em
+  a
+    text-shadow: none
+  small
+    font-size: 0.7em
+
+#end
+  img
+    min-width: 120vw
+    margin-left: -20vw
