@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 				' * http://lab.hakim.se/reveal-js\n' +
 				' * MIT licensed\n' +
 				' *\n' +
-				' * Copyright (C) 2016 Hakim El Hattab, http://hakim.se\n' +
+				' * Copyright (C) 2015 Hakim El Hattab, http://hakim.se\n' +
 				' */'
 		},
 
@@ -113,6 +113,9 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			options: {
+				livereload: true
+			},
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
 				tasks: 'js'
@@ -126,13 +129,10 @@ module.exports = function(grunt) {
 				tasks: 'css-core'
 			},
 			html: {
-				files: [ '*.html']
+				files: [ 'index.html']
 			},
 			markdown: {
-				files: [ '*.md' ]
-			},
-			options: {
-				livereload: true
+				files: [ './*.md' ]
 			}
 		}
 

@@ -9,6 +9,11 @@
 	-webkit-print-color-adjust: exact;
 }
 
+
+.slides {
+  background: black;
+}
+
 body {
 	margin: 0 auto !important;
 	border: 0;
