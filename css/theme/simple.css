@@ -18,7 +18,11 @@ body {
   font-family: "Proxima Nova", sans-serif;
   font-size: 36px;
   font-weight: normal;
-  color: #2D2D2D; }
+  color: #2D2D2D;}
+
+.reveal .slides {
+  text-align: left;
+}
 
 ::selection {
   color: #fff;
@@ -30,6 +34,14 @@ body {
   line-height: 1.3;
   font-weight: inherit; }
 
+section[data-background] {
+  text-align: center;
+}
+
+section[data-background^="#"] .title span{
+  font-style: normal;
+  background: transparent;
+}
 /*********************************************
  * HEADERS
  *********************************************/
@@ -41,7 +53,6 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #2D2D2D;
-  font-family: Georgia, Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -68,6 +79,7 @@ body {
  * OTHER
  *********************************************/
 .reveal p {
+  font-family: Georgia, Impact, sans-serif;
   margin: 20px 0;
   line-height: 1.3; }
 
@@ -75,8 +87,19 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-  max-width: 95%;
+  max-width: 100%;
   max-height: 95%; }
+
+.reveal .slide-background video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+}
 
 .reveal strong,
 .reveal b {
@@ -88,9 +111,14 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
+  font-family: Georgia, Impact, sans-serif;
+  font-weight: 500;
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
+
+.reveal li {
+  margin-bottom: 0.3em; }
 
 .reveal ol {
   list-style-type: decimal; }
@@ -195,8 +223,7 @@ body {
 .reveal small {
   display: inline-block;
   font-size: 0.6em;
-  line-height: 1.2em;
-  vertical-align: top; }
+  line-height: 1.2em; }
 
 .reveal small * {
   vertical-align: top; }
@@ -209,7 +236,19 @@ body {
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease; 
+  position: relative;
+  display: inline-block;
+}
+
+.reveal a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: -0.2em;
+}
 
 .reveal a:hover {
   color: #e74c3c;
@@ -289,18 +328,17 @@ body {
 .reveal .title {
   line-height: 1.2; 
   padding: 2px 0; 
-  margin: 20px auto;
-  color: white;
-  text-align: left;
+  margin: 0 auto 0.3em;
   font-family: "Proxima Nova";
   font-weight: 800;
 }
 
 .reveal .title span {
+  color: white;
   background: #F45656;
   display: inline;
-  padding: 1.5rem;
+  padding: 0.2em;
   -webkit-box-decoration-break: clone;
   font-style: italic;
-  padding-right: 3rem;
+  padding-right: 0.4em;
 }
