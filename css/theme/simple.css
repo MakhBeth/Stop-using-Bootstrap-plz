@@ -342,3 +342,31 @@ section[data-background^="#"] .title span{
   font-style: italic;
   padding-right: 0.4em;
 }
+
+.special-effect-catrix {
+  display: block;
+  position: relative;
+}
+
+.special-effect-catrix-c {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.special-effect-catrix-m {
+  opacity: 1;
+}
+
+.present .special-effect-catrix-m {
+  opacity: 0;
+  transition: opacity 10s 10s;
+}
+
+.present .special-effect-catrix-c {
+  opacity: 1;
+  transition: opacity 10s 10s;
+}
+
