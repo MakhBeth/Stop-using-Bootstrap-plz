@@ -360,12 +360,12 @@ section[data-background^="#"] .title span{
   opacity: 1;
 }
 
-.present .special-effect-catrix-m {
+.present .present .special-effect-catrix-m {
   opacity: 0;
   transition: opacity 5s 5s;
 }
 
-.present .special-effect-catrix-c {
+.present .present .special-effect-catrix-c {
   opacity: 1;
   transition: opacity 5s 5s;
 }
