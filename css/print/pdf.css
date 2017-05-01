@@ -60,6 +60,7 @@ ul, ol, div, p {
 	overflow: hidden !important;
 }
 .reveal .slides {
+	background: #FBE04B;
 	position: static;
 	width: 100%;
 	height: auto;
