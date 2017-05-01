@@ -28,7 +28,7 @@
 					Milano JS
 					<h2>Web Animation API</h2>
 				</section>
-				<section style="position: relative;">
+				<section style="position: relative; text-align: center;">
 					<div id="logo">
 						<div id="logo-line-1" class="logo-line"></div>
 						<div id="logo-line-2" class="logo-line"></div>
@@ -180,12 +180,349 @@
 						<div class="snow"></div>
 					</div>
 				</section>
-				<section>
-					<h1>Let's start meow</h1>
-					<p class="fragment" style="text-align: left;">Anche perché in un minuto vi ho fatto vedere n'animazione e ringraziato tutti, mancano solo 6 minuti, non vorrei andare lungo che poi chi te lo sente Granze. Mo fa finta di ridere, ma guardategli gli occhi. <br> Io c'ho paura.</p>
+				<section data-background="./images/cat-party.gif">
+					<h2 style="color: #fff; text-transform: uppercase; font-weight: 900; text-shadow: 0.05em 0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black;">Let's start meow</h2>
+					<p class="fragment" style="text-align: left;  white; text-shadow: 0.05em 0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black; color: white;">Anche perché in un minuto vi ho fatto vedere n'animazione e ringraziato tutti, mancano solo 6 minuti, non vorrei andare lungo che poi chi te lo sente Granze. Mo' fa finta di ridere, ma guardategli gli occhi. <br> Io c'ho paura.</p>
 				</section>
 				<section>
-					
+					<h1>Cosa sono?</h1>
+					<p class="cit">The Web Animations API provides a common language for browsers and developers to describe animations on DOM elements.</p>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API" target="_blank" class="cit">MDN</a>
+				</section>
+				<section>
+					<section>
+						<h1 style="font-size: 3em;">Come animiamo oggi?</h1>
+						<p>
+							<small>(In classifica)</small>
+						</p>
+						<ul>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval" target="_blank"><code>setInterval</code></a></li>
+							<li><a href="http://api.jquery.com/animate/" target="_blank"><code>jQuery.animate()</code></a></li>
+							<li><a href="https://developer.mozilla.org/it/docs/Web/API/window/requestAnimationFrame" target="_blank"><code>requestAnimationFrame()</code></a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">CSS animations</a> o librerie come <a href="https://greensock.com/gsap">GSAP</a> e <a href="http://velocityjs.org" target="_blank">Velocity</a></li>
+						</ul>
+					</section>
+					<section>
+						<h1>Set interval</h1>
+						<p><small class="">seriamente?</small></p>
+						<p>È impreciso e le animazioni possono scattare parecchio</p>
+					</section>
+					<section>
+						<h1>jQuery Animate</h1>
+						<p>Oltre al fatto di avere di mezzo jQuery, ha seri problemi prestazionali</p>
+					</section>
+					<section>
+						<h1 style="font-size: 2.5em">Request Animation Frame</h1>
+						<pre><code class="js">var start = null;
+var element = document.getElementById('SomeElementYouWantToAnimate');
+element.style.position = 'absolute';
+
+function step(timestamp) {
+  if (!start) start = timestamp;
+  var progress = timestamp - start;
+  element.style.left = Math.max(progress / 10, 200) + 'px';
+  if (progress < 2000) {
+    window.requestAnimationFrame(step);
+  }
+}
+
+window.requestAnimationFrame(step);</code></pre>
+					</section>
+					<section>
+						<h1>CSS</h1>				
+						<p>Sono ok per la maggiorparte dei casi ma: non possono essere composte sullo stesso elemento, è difficile lanciarle in parallelo.
+							<br>
+							È impossibile animare valori che cambiano dinamicamente (provate un vertical accordion con testo ed height auto)!
+						</p>
+					</section>
+					<section>
+						<h1>Librerie esterne</h1>
+						<small>Come se non avessimo già abbastanza dipendenze</small> <br>
+						Ok se fate un utilizzo massivo di animazioni del progetto, ma: <br>
+						<ul>
+							<li>È comunque una libreria esterna</li>
+							<li>Probabilmente state sparando ad una mosca con un cannone</li>
+							<li>Per quanto ne dica GSAP non sono uno standard</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Quindi?</h1>
+						<h2 class="fragment" style="font-weight: 100;">Vediamo un po' di codice</h2>
+					</section>
+					<section>
+						<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
+    { transform: 'scale(1)', opacity: 1, offset: 0 },
+    { transform: 'scale(.5)', opacity: .5, offset: .3 },
+    { transform: 'scale(.6)', opacity: .6, offset: 1 }
+  ], {
+    duration: 700, //milliseconds
+    easing: 'ease-in-out', //'linear', a bezier curve, etc.
+    delay: 10, //milliseconds
+    iterations: Infinity, //or a number
+    direction: 'alternate', //'normal', 'reverse', etc.
+    fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+  });</code></pre>
+					</section>
+					<section>
+						Oppure in puro CSS:
+					</section>
+					<section>
+						<pre><code class="css">@keyframes emphasis {
+  0% {
+    transform: scale(1); 
+    opacity: 1;}
+  30% {
+    transform: scale(.5); 
+    opacity: .5;}
+  100% {
+    transform: scale(.6);
+    opacity: .6;}
+}
+#toAnimate {
+  animation: emphasis 700ms ease-in-out 10ms infinite alternate forwards;
+}</code></pre>
+					<div class="achievment"><img src="./images/achievment.png" alt="" class="plain"></div>
+					</section>
+					<section>
+						<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
+    { transform: 'scale(1)', opacity: 1, offset: 0 },
+    { transform: 'scale(.5)', opacity: .5, offset: .3 },
+    { transform: 'scale(.6)', opacity: .6, offset: 1 }
+  ], {
+    duration: 700, //milliseconds
+    easing: 'ease-in-out', //'linear', a bezier curve, etc.
+    delay: 10, //milliseconds
+    iterations: Infinity, //or a number
+    direction: 'alternate', //'normal', 'reverse', etc.
+    fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+  });</code></pre>
+					</section>
+					<section>
+  						<div id="cat1" style="text-align:center"><img src="./images/cat.png" alt="" class="plain"></div>
+						<script type="text/javascript">
+							var cat1 = document.getElementById('cat1').animate([
+								{ transform: 'scale(1)', opacity: 1, offset: 0 },
+								{ transform: 'scale(.5)', opacity: .5, offset: .3 },
+								{ transform: 'scale(.6)', opacity: .6, offset: 1 }
+							], {
+								duration: 700, //milliseconds
+								easing: 'ease-in-out', //'linear', a bezier curve, etc.
+								delay: 10, //milliseconds
+								iterations: Infinity, //or a number
+								direction: 'alternate', //'normal', 'reverse', etc.
+								fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+							});
+						</script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h6>Andando un po' più a fondo</h6>
+						<pre><code class="js">var animation = element.animate(keyframes, options); </code></pre>
+					</section>
+					<section>
+						<h6><code class="js">keyframes</code></h6>
+						<p>È un oggetto che contiene tutte le proprietà animabili, può essere formattato in due modi:</p>
+						<pre><code class="js">element.animate({
+  opacity: [ 0, 1 ],          // [ from, to ]
+  color:   [ "#fff", "#000" ] // [ from, to ]
+}, 2000);</code></pre> oppure:
+						<pre><code class="js">element.animate([ 
+  { // from
+    opacity: 0,
+    color: "#fff"
+  }, 
+  { // to
+    opacity: 1,
+ ​   color: "#000"
+  }
+], 2000);</code></pre>
+					</section>
+					<section>
+						<h6><code class="js">options</code></h6>
+						<p>
+							Un <strong>intero</strong> che rappresenta la durata dell'animazione in millisecondi oppure un <strong>oggetto</strong> che contiene una o più delle seguenti proprietà:
+						</p>
+						<ul>	
+							<li><code class="js">id</code></li>
+							<li><code class="js">delay</code></li>
+							<li><code class="js">direction</code></li>
+							<li><code class="js">duration</code></li>
+							<li><code class="js">easing</code></li>
+							<li><code class="js">endDelay</code></li>
+							<li><code class="js">fill</code></li>
+							<li><code class="js">iterationStart</code></li>
+							<li><code class="js">iterations</code></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Sì, in pratica sono le proprietà <code>animation-</code> del CSS esposte su JS</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>E fin qua è quasi CSS in JS</h3>
+					</section>
+					<section>
+						<h2>La console di Chrome</h2>
+						<img src="./images/chrome-console.png" alt="">
+					</section>
+					<section>
+						Esatto, <code>animate()</code> ritorna un oggetto di tipo Animation con i propri metodi e proprietà. Ed è qui che arriva il bello!
+					</section>
+					<section>
+						<h3>Metodi</h3>
+						<ul>
+							<li><code>cancel()</code> torna allo stato iniziale</li>
+							<li><code>finish()</code> salta alla fine del dell'animazione</li>
+							<li><code>pause()</code> mette l'animazione in pausa</li>
+							<li><code>play()</code> mette l'animazione in esecuzione</li>
+							<li><code>reverse()</code> riproduce l'animazione al contrario</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Proprietà</h3>
+						<ul>
+							<li><code>currentTime</code> mostra/setta il tempo di esecuzione in ms</li>
+							<li><code>id</code> ritorna l'id</li>
+							<li><code>oncancel</code> esegue una funzione quando l'animazione viene cancellata dall'apposito metodo</li>
+							<li><code>onfinish</code> esegue una funzione quando l'animazione termina</li>
+							<li><code>playbackRate</code> la "velocità" dell'animazione, può essere negativa </li>
+							<li><code>playState</code> mostra/setta lo stato di esecuzione</li>
+							<li><code>startTime</code></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Promise</h3>
+						<pre><code class="js">//set up 1 second animation to fade box out
+var box = document.getElementById('box');
+var animation = box.animate([{ opacity: 1 }, { opacity: 0 }], 1000);
+
+function finishedHandler() { 
+  console.log('animation finished: ' + Date.now());
+}
+function canceledHandler() { 
+  console.log('animation canceled: ' + Date.now());
+}
+
+//the Promise version, log the timestamp when the Animation finishes
+animation.finished.then(finishedHandler, canceledHandler);
+
+//the effective successful equivalent with the onfinish callback
+animation.onfinish = finishedHandler;</code></pre>
+						<a href="http://danielcwilson.com/blog/2016/03/animations-and-promises/" class="cit">Dan Wilson</a>
+					</section>
+					<section>
+						<h3>Promise</h3>
+						<ul>
+							<li><code>finished</code></li>
+							<li><code>ready</code></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Altre cosucce da sapere</h2>
+					</section>
+					<section>
+						<h3>Un elemento può ovviamente avere più animazioni</h3>
+						<pre><code class="js">var animated = document.getElementById('cat');
+var purr = animated.animate({}, 1000);
+var rotate = animated.animate({}, 2000);
+var jump = animated.animate({}, 3500);</code></pre>
+					</section>
+					<section>
+						<h3>Potete vedere tutte le animazioni presenti attraverso il metodo:</h3>
+						<code>document.getAnimations()</code>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>
+							Ma veniamo al momento da tutti agognato!
+						</p>
+						<p class="fragment">
+							Il momento del ricordo
+						</p>
+					</section>
+					<section>
+						<img src="./images/flash.png" alt="">
+					</section>
+					<section>
+						<h1>È possibile animare su un path!!1!1</h1>
+					</section>
+					<section>
+						<div id="containerCat">
+							<div id="cat2">
+								<img src="./images/cat.png" alt="" class="plain"><br>
+								MilanoJS
+							</div>
+						</div>
+						<script>
+							var path = `path("M300.358,297.675c55.955,57.158 83.03,107.698 141.392,107.698c58.362,0 105.292,-46.93 105.292,-105.292c0,-58.361 -46.93,-105.893 -105.292,-105.292c-58.362,0.602 -80.022,43.321 -132.969,102.886c-53.549,52.947 -94.462,107.698 -152.824,107.698c-58.362,0 -105.292,-46.93 -105.292,-105.292c0,-58.361 46.93,-105.292 105.292,-105.292c58.362,0 98.072,55.956 144.401,102.886Z")`;
+							var p = document.getElementById('cat2');
+							var animation = p.animate({
+							offsetPath: [path, path ],
+							offsetDistance: [0, "100%"]
+							}, {duration: 4000, iterations: Infinity});
+						</script>
+					</section>
+					<section>
+						<pre><code class="js">
+var path = `path("M300.358,297.675c55.955,57.158 83.03,107.698 141.392,107.698c58.362,0 105.292,-46.93 105.292,-105.292c0,-58.361 -46.93,-105.893 -105.292,-105.292c-58.362,0.602 -80.022,43.321 -132.969,102.886c-53.549,52.947 -94.462,107.698 -152.824,107.698c-58.362,0 -105.292,-46.93 -105.292,-105.292c0,-58.361 46.93,-105.292 105.292,-105.292c58.362,0 98.072,55.956 144.401,102.886Z")`;
+var p = document.getElementById('cat2');
+var animation = p.animate({
+	offsetPath: [path, path ],
+	offsetDistance: [0, "100%"]
+}, {
+	duration: 4000, 
+	iterations: Infinity
+});</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Utilizzarle oggi?</h1>
+					</section>
+					<section>
+						<img src="./images/caniuse.png" alt="">
+					</section>
+					<section>
+						<h2>Ma abbiamo un <a href="https://github.com/web-animations/web-animations-js" target="_blank">polyfill</a></h2>
+						<small>
+							e tranquilli che c'è già pronto per il vostro framework preferito
+						</small>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>
+							Quindi?
+						</h1>
+					</section>
+					<section>
+						<h3>Plz, possiamo usarle, facciamolo.</h3>
+						Il web non è un file .sketch o .psd, la user interface può trarre grandi vantaggi dalle animazioni
+					</section>
+					<section>
+						<img src="./images/animationUX.gif" alt="">
+					</section>
+				</section>
+				<section style="text-align: center">
+					<img src="./images/thanks.jpg" alt="">
+				</section>
+				<section>
+					<h2>Bibliography</h2>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">Mozilla Developers Network</a></li>
+						<li><a href="https://www.chromestatus.com/features#animations" target="_blank">Chrome platform status</a></li>
+						<li><a href="http://danielcwilson.com/blog/2015/07/animations-intro/" target="_blank">WAAPI Tutorial</a></li>
+						<li><a href="https://pawelgrzybek.com/intro-to-the-web-animations-api/" target="_blank">Intro to WAAPI</a></li>
+						<li><a href="https://webdesigner-webdeveloper.com/weblog/exploring-web-animations/" target="_blank">Exploring WAAPI</a></li>
+						<li><a href="https://medium.com/ux-in-motion/creating-usability-with-motion-the-ux-in-motion-manifesto-a87a4584ddc" target="_blank">Motion in UX</a></li>
+					</ul>
 				</section>
 			</div>
 		</div>

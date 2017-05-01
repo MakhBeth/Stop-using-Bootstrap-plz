@@ -11,14 +11,17 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #FBE04B; }
+  background-color: #FBE04B;}
 
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #000; }
+
+.reveal .slides {
+  text-align: left;
+}
 
 ::selection {
   color: #fff;
@@ -141,8 +144,8 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 0;
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
@@ -206,7 +209,7 @@ body {
  *********************************************/
 .reveal a {
   color: #333;
-  text-decoration: none;
+  text-decoration: underline;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
@@ -545,3 +548,39 @@ body {
   }
 }
 
+p.cit {
+  text-align: left;
+  border: 10px solid black;
+  padding: 1rem;
+  color:black;
+}
+
+a.cit {
+  display: block;
+  text-align: right;
+}
+
+.achievment {
+  text-align: center;
+  transform: translate(0, 2rem);
+  opacity: 0;
+}
+
+.present .present .achievment {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1s 3s ease-in;
+}
+
+
+#containerCat {
+  position: absolute;
+  left: 30%;
+  transform: translate(-50%, -300%);
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+#cat2 {
+  position: absolute;
+}
