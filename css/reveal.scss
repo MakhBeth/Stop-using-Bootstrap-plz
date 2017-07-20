@@ -1426,6 +1426,10 @@ body .reveal {
 			-1px -1px #C24556
 	}
 
+	a {
+		text-decoration: underline;
+	}
+
 	.slides {
 		text-align: left;
 		height: 100% !important;
@@ -1456,6 +1460,10 @@ body .reveal {
 		align-items: center;
 		height: 0;
 		z-index: 1000;
+
+		& ~ section {
+			padding-top: 5vh !important;
+		}
 
 		.step1,
 		.step2 {
@@ -1500,5 +1508,34 @@ body .reveal {
 				}
 			}
 		}
+	}
+}
+
+@keyframes framework {
+	$child: 12;
+	@for $i from 0 through $child - 1 {
+		#{100% / $child * $i} {
+			transform: translateX(-100% * $i);
+		}
+		#{100% / $child * $i + 100% / $child * 0.9} {
+			transform: translateX(-100% * $i);
+		}
+	}
+}
+
+.framework	{
+	overflow: hidden;
+
+	> div {
+		display: flex;
+
+		span {
+			min-width: 100%;
+			display: block;
+		}
+	}
+
+	&.visible > div {
+		animation: framework 30s infinite;
 	}
 }

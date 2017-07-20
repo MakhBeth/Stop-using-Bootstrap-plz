@@ -1308,6 +1308,8 @@ body .reveal {
     text-align: center;
     padding: 0.2em 0.2em;
     text-shadow: 0px 0px 2px #C24556, 1px 1px #C24556,  -1px 1px #C24556, 1px -1px #C24556, -1px -1px #C24556; }
+  body .reveal a {
+    text-decoration: underline; }
   body .reveal .slides {
     text-align: left;
     height: 100% !important; }
@@ -1342,6 +1344,8 @@ body .reveal {
             align-items: center;
     height: 0;
     z-index: 1000; }
+    body .reveal header.header ~ section {
+      padding-top: 5vh !important; }
     body .reveal header.header .step1,
     body .reveal header.header .step2 {
       text-transform: uppercase;
@@ -1375,3 +1379,164 @@ body .reveal {
         min-width: 10em; }
       .present > header.header .step2 {
         transition-delay: 2.5s; }
+
+@-webkit-keyframes framework {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  7.5% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  8.3333333333% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  15.8333333333% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  16.6666666667% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  24.1666666667% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  25% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%); }
+  32.5% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%); }
+  33.3333333333% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%); }
+  40.8333333333% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%); }
+  41.6666666667% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  49.1666666667% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  50% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%); }
+  57.5% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%); }
+  58.3333333333% {
+    -webkit-transform: translateX(-700%);
+            transform: translateX(-700%); }
+  65.8333333333% {
+    -webkit-transform: translateX(-700%);
+            transform: translateX(-700%); }
+  66.6666666667% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%); }
+  74.1666666667% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%); }
+  75% {
+    -webkit-transform: translateX(-900%);
+            transform: translateX(-900%); }
+  82.5% {
+    -webkit-transform: translateX(-900%);
+            transform: translateX(-900%); }
+  83.3333333333% {
+    -webkit-transform: translateX(-1000%);
+            transform: translateX(-1000%); }
+  90.8333333333% {
+    -webkit-transform: translateX(-1000%);
+            transform: translateX(-1000%); }
+  91.6666666667% {
+    -webkit-transform: translateX(-1100%);
+            transform: translateX(-1100%); }
+  99.1666666667% {
+    -webkit-transform: translateX(-1100%);
+            transform: translateX(-1100%); } }
+
+@keyframes framework {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  7.5% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
+  8.3333333333% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  15.8333333333% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
+  16.6666666667% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  24.1666666667% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%); }
+  25% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%); }
+  32.5% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%); }
+  33.3333333333% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%); }
+  40.8333333333% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%); }
+  41.6666666667% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  49.1666666667% {
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  50% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%); }
+  57.5% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%); }
+  58.3333333333% {
+    -webkit-transform: translateX(-700%);
+            transform: translateX(-700%); }
+  65.8333333333% {
+    -webkit-transform: translateX(-700%);
+            transform: translateX(-700%); }
+  66.6666666667% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%); }
+  74.1666666667% {
+    -webkit-transform: translateX(-800%);
+            transform: translateX(-800%); }
+  75% {
+    -webkit-transform: translateX(-900%);
+            transform: translateX(-900%); }
+  82.5% {
+    -webkit-transform: translateX(-900%);
+            transform: translateX(-900%); }
+  83.3333333333% {
+    -webkit-transform: translateX(-1000%);
+            transform: translateX(-1000%); }
+  90.8333333333% {
+    -webkit-transform: translateX(-1000%);
+            transform: translateX(-1000%); }
+  91.6666666667% {
+    -webkit-transform: translateX(-1100%);
+            transform: translateX(-1100%); }
+  99.1666666667% {
+    -webkit-transform: translateX(-1100%);
+            transform: translateX(-1100%); } }
+
+.framework {
+  overflow: hidden; }
+  .framework > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .framework > div span {
+      min-width: 100%;
+      display: block; }
+  .framework.visible > div {
+    -webkit-animation: framework 30s infinite;
+            animation: framework 30s infinite; }
