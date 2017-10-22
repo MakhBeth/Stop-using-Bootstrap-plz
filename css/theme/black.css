@@ -287,17 +287,21 @@ body {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 .reveal .title {
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1em;
+  margin: 0.18em; }
   .reveal .title span {
     background-color: #E0168F;
-    box-shadow: 0 0 0 0.09em #E0168F, -0.1em 0 0 0.09em #E0168F, 0.1em 0 0 0.09em #E0168F;
-    margin: 0.09em 0; }
+    box-shadow: 0 0 0 0.09em #E0168F, -0.1em 0 0 0.09em #E0168F, 0.1em 0 0 0.09em #E0168F; }
   .reveal .title small {
     vertical-align: baseline; }
 
 .reveal .cit {
   text-align: right;
   font-style: italic;
-  padding-top: 1em; }
+  margin-top: 2em; }
   .reveal .cit img {
-    margin-left: 2em; }
+    margin: 0;
+    max-width: 7em;
+    display: inline;
+    background-color: transparent;
+    vertical-align: middle; }

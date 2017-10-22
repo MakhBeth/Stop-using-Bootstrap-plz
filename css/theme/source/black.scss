@@ -49,14 +49,14 @@ section.has-light-background {
 // ---------------------------------------------
 
 .reveal {
-
+	
 	.title {
 		letter-spacing: 0.1em;
+		margin: 0.18em;
 		
 		span {
 			background-color: #E0168F;
 			box-shadow: 0 0 0 0.09em #E0168F, -0.1em 0 0 0.09em #E0168F, 0.1em 0 0 0.09em #E0168F;
-			margin: 0.09em 0;
 		}
 		
 		small {
@@ -67,11 +67,14 @@ section.has-light-background {
 	.cit {
 		text-align: right;
 		font-style: italic;
-		padding-top: 1em;
+		margin-top: 2em;	
 
 		img {
-			margin-left: 2em; 
-			
+			margin: 0;
+			max-width: 7em;
+			display: inline;
+			background-color: transparent;
+			vertical-align: middle;
 		}
 	}
 }
