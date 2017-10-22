@@ -16,19 +16,19 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
+$backgroundColor: #282C34;
 
 $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 38px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: 'Quattrocento Sans', Helvetica, sans-serif;
+$headingFont: 'Quattrocento', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: #42affa;
+$linkColor: #E0168F;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -47,3 +47,31 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal {
+
+	.title {
+		letter-spacing: 0.1em;
+		
+		span {
+			background-color: #E0168F;
+			box-shadow: 0 0 0 0.09em #E0168F, -0.1em 0 0 0.09em #E0168F, 0.1em 0 0 0.09em #E0168F;
+			margin: 0.09em 0;
+		}
+		
+		small {
+			vertical-align: baseline;
+		}
+	}
+	
+	.cit {
+		text-align: right;
+		font-style: italic;
+		padding-top: 1em;
+
+		img {
+			margin-left: 2em; 
+			
+		}
+	}
+}
