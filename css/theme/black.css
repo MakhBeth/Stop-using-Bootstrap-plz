@@ -305,3 +305,9 @@ body {
     display: inline;
     background-color: transparent;
     vertical-align: middle; }
+
+.reveal img.plain {
+  background-color: transparent; }
+
+.reveal .controls {
+  transform: scale(0.7) translate(35%, 35%); }

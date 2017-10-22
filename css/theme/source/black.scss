@@ -77,4 +77,12 @@ section.has-light-background {
 			vertical-align: middle;
 		}
 	}
+
+	img.plain {
+		background-color: transparent;
+	}
+
+	.controls {
+		transform: scale(0.7) translate(35%, 35%);
+	}
 }
