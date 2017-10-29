@@ -47,6 +47,14 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+html {
+	counter-reset: trick;
+}
+
+.u-center {
+	margin: 0 auto;
+	text-align: center;
+}
 
 .reveal {
 	
@@ -85,4 +93,210 @@ section.has-light-background {
 	.controls {
 		transform: scale(0.7) translate(35%, 35%);
 	}
+}
+
+.count {
+	counter-increment: trick;
+}
+
+.counter::before {
+	content: '#' counter(trick);
+}
+
+.screenDemo {
+	position: relative;
+	height: 100%;
+
+	.screenDemoImg {
+		position: absolute;
+		width: 30vw;
+		left: 50%;
+		opacity: 0;
+		transition: opacity 500ms;
+		transition-delay: 0;
+
+		.present:not(.stack) & {
+			opacity: 1;
+		}
+
+		&:nth-child(1) {
+			transform: translate(-10%, -52%);
+			.present:not(.stack) & {
+				transition-delay: 1000ms;
+			}
+		}
+
+		&:nth-child(2) {
+			transform: translate(-55%, -10%);
+			.present:not(.stack) & {
+				transition-delay: 2000ms;
+			}
+		}
+
+		&:nth-child(3) {
+			transform: translate(-100%, -50%);
+			.present:not(.stack) & {
+				transition-delay: 3000ms;
+			}
+		}
+
+		&:nth-child(4) {
+			transform: translate(0%, 0%);
+			.present:not(.stack) & {
+				transition-delay: 4000ms;
+			}
+		}
+
+		&:nth-child(5) {
+			transform: translate(-100%, -100%);
+			.present:not(.stack) & {
+				transition-delay: 5000ms;
+			}
+		}
+
+		&:nth-child(6) {
+			transform: translate(0%, -100%);
+			.present:not(.stack) & {
+				transition-delay: 6000ms;
+			}
+		}
+
+		&:nth-child(7) {
+			transform: translate(-100%, 0%);
+			.present:not(.stack) & {
+				transition-delay: 7000ms;
+			}
+		}
+
+		&:nth-child(8) {
+			transform: translate(-50%, -50%);
+			.present:not(.stack) & {
+				transition-delay: 8000ms;
+			}
+		}
+	}
+}
+
+/* EXAMPLES */
+@keyframes empty-fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes empty-translate-in {
+	0% {
+		transform: translateX(-2em);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+
+@keyframes emmpty-loading {
+	0% {
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+	}
+	5%,
+	95% {
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+	}
+	10%,
+	59% {
+		box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+	}
+	20% {
+		box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+	}
+	38% {
+		box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+	}
+	100% {
+		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+	}
+}
+
+	@keyframes empty-round {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.example-empty li:empty {
+	display: none;
+}
+
+.present:not(.stack) .example-empty .main:empty {
+	background: #E0168F;
+	padding: 1em;
+	margin: 1em 0;
+	border-left: 5px solid #c0392b;
+
+	&::before {
+		content: "The app is unavaible now!"
+	}
+}
+
+.present:not(.stack) .example-empty .main2:empty,
+.present:not(.stack) .example-empty .main4:empty {
+	&::after {
+		display: block; 
+		content: '';
+		color: #ffffff;
+		font-size: 90px;
+		text-indent: -9999em;
+		overflow: hidden;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		margin: 72px auto;
+		position: relative;
+		transform: translateZ(0);
+		animation: emmpty-loading 1.6s infinite ease, empty-round 1.6s infinite ease;
+	}
+}
+
+.present:not(.stack) .example-empty {
+	position: relative;
+}
+.present:not(.stack) .example-empty .main3:empty::after {
+	background: #E0168F;
+	padding: 1em;
+	margin: 1em 0;
+	border-left: 5px solid #c0392b;
+	content: "The app is unavaible now!";
+	display: block;
+	transform: translateY(-100%);
+	animation: empty-fade 1s 5s forwards;
+	opacity: 0;
+}
+
+.present:not(.stack) .example-empty .main3:empty {
+	&::before {
+		display: block; 
+		content: '';
+		color: #ffffff;
+		font-size: 90px;
+		text-indent: -9999em;
+		overflow: hidden;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		margin: 72px auto;
+		transform: translate(0);
+		animation: emmpty-loading 1.6s infinite ease, empty-round 1.6s infinite ease, empty-fade 1s 4s forwards reverse;
+	}
+}
+
+.present:not(.stack) .example-empty .main4:not(:empty) {
+	animation: empty-fade 1s, empty-translate-in 1s;
 }
