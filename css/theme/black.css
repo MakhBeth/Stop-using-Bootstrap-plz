@@ -598,3 +598,6 @@ img:before {
 img:after {
   content: "😭 Image not available: " attr(alt);
   color: #7f8c8d; }
+
+.example-external a:not([href*="localhost"]) {
+  color: red; }
