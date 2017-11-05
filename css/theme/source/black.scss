@@ -47,16 +47,13 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
-html {
-	counter-reset: trick;
-}
-
 .u-center {
 	margin: 0 auto;
 	text-align: center;
 }
 
 .reveal {
+	counter-reset: trick;
 	
 	.title {
 		letter-spacing: 0.1em;
@@ -177,7 +174,48 @@ html {
 	}
 }
 
+ul li {
+	margin-bottom: 1em !important;
+}
+
+.reveal cite {
+	padding: 2rem;
+	font-style: italic;
+	font-size: 1.2em;
+	position: relative;
+	display: block;
+
+	&::before {
+		content: '“';
+		font-size: 3em;
+		opacity: 0.5;
+		position: absolute;
+		top: 0;
+		left: -2rem;
+	}
+	
+	&::after {
+		content: '”';
+		display: block;
+		font-size: 3em;
+		opacity: 0.5;
+		position: absolute;
+		display: block;
+		bottom: 0;
+		right: 2rem;
+		line-height: 0;
+	}
+
+	+ span {
+		text-align: right;
+		display: block;
+		padding-right: 2rem;
+		position: relative;
+	}
+}
+
 /* EXAMPLES */
+// :EMPTY
 @keyframes empty-fade {
 	0% {
 		opacity: 0;
@@ -300,3 +338,149 @@ html {
 .present:not(.stack) .example-empty .main4:not(:empty) {
 	animation: empty-fade 1s, empty-translate-in 1s;
 }
+
+// :CHECKED
+.example-checked {
+	input[type=checkbox]:not(.cb__input) {
+
+		width: 100px; height: 100px;
+
+		&:checked {
+			box-shadow: 0 0 50px 10px #E0168F;
+		}
+	}
+
+	input[type=checkbox]:checked ~ .selector {
+		background: #E0168F;
+	}
+}
+
+.cb {
+	$background-background: #fff;
+	$background-border: #E0168F;
+  
+	$height: 1.2em;
+	$width: 1.2em;
+  
+	align-items: center;
+	color: white;
+	display: flex;
+	
+	&__cont {
+		display: inline-block;
+		flex: 0 0 auto;
+		height: $height;
+		overflow: hidden;
+		position: relative;
+		width: $width;
+		margin-right: 0.5em !important;
+		border-radius: 5px;
+	}
+	
+	&__input {
+		border-radius: 0;
+		display: block;
+		height: calc(#{$height} + 3px);
+		left: 0;
+		opacity: 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: calc(#{$width} + 3px);
+		z-index: 1;
+  
+	  &:hover {
+		cursor: pointer;
+	  }
+	}
+  
+	&__background {
+	  background-color: $background-background;
+	  border: 1px solid $background-border;
+	  border-radius: em-calc(3);
+	  height: $height;
+	  transition: background-color (100ms);
+	  width: $width;
+	  will-change: background-color;
+	}
+  
+	&__input:checked ~ &__background {
+	  background-color: #E0168F;
+	  border-color: #E0168F;
+	  height: $height;
+	  transition: background-color 300ms;
+	  width: $width;
+	}
+  
+	&__svg {
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  position: absolute;
+	  top: 0;
+  
+	  .cb__path {
+		stroke: $background-background;
+		stroke-dasharray: 100;
+		stroke-dashoffset: 100;
+		stroke-width: 0;
+		transition: stroke-dashoffset 300ms (300ms * 0.3),
+					stroke-width 300ms (300ms * 0.3);
+		will-change: stroke-dashoffset, stroke-width;
+	  }
+	}
+  
+	&__input:checked ~ &__svg {
+	  .cb__path {
+		stroke-dashoffset: 0;
+		stroke-width: 10;
+	  }
+	}
+
+	&__label {
+		cursor: pointer;
+	}
+  }
+  
+.example-target {
+	div:target {
+		background: #E0168F;
+		color: #fff;
+	}
+}
+
+// Placeholder shown
+.example-placeholder-show {
+	input {
+		font-size: 2em;
+		padding: 0.3em 0.5em;
+		outline: none;
+	}
+
+	input {
+		border: 10px solid black;
+	}
+	
+	input:placeholder-shown {
+		border-color: #E0168F
+	}
+}
+
+// broken image
+
+img { min-height: 50px; position: relative; display: inline-block; text-align: center;}
+
+img::before, img::after {
+	display: block; position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);}
+
+img:before {  
+	content: " ";
+	height: 100%; width: 100%;
+	background-color: #ecf0f1;
+	border: 10px dashed currentColor;}
+
+img:after {  
+	content: "😭 Image not available: " attr(alt);
+	color: #7f8c8d;}

@@ -15,6 +15,7 @@ body {
 	padding: 0;
 	float: none !important;
 	overflow: visible;
+	background: #282C34;
 }
 
 html {
@@ -54,6 +55,7 @@ ul, ol, div, p {
 	margin: auto;
 }
 .reveal {
+	background: #282C34;
 	width: auto !important;
 	height: auto !important;
 	overflow: hidden !important;
