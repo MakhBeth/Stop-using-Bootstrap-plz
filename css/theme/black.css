@@ -291,6 +291,9 @@ body {
   margin: 0 auto;
   text-align: center; }
 
+.frame {
+  display: none; }
+
 .reveal {
   counter-reset: trick; }
   .reveal .title {
