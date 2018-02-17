@@ -4,492 +4,114 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #282C34;
+$backgroundColor: #282c34;
 
 $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 38px;
-$mainFont: 'Quattrocento Sans', Helvetica, sans-serif;
-$headingFont: 'Quattrocento', Helvetica, sans-serif;
+$mainFont: monospace;
+$headingFont: "Maven Pro", Helvetica;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: #E0168F;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColor: #e0168f;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
 section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #222;
+  }
 }
-
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
 .u-center {
-	margin: 0 auto;
-	text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .frame {
-	display: none;
+  display: none;
+}
+
+// CUSTOM
+
+$red: #cc210f;
+$gray: #6e6e80;
+$blue: #3355ea;
+$green: #006b4c;
+
+.red {
+  color: $red !important;
+}
+.blue {
+  color: $blue !important;
+}
+.gray {
+  color: $gray !important;
+}
+.green {
+  color: $green !important;
+}
+
+.center {
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900");
+
+body {
+  background-color: #6e6e80;
 }
 
 .reveal {
-	counter-reset: trick;
-	
-	.title {
-		letter-spacing: 0.1em;
-		margin: 0.18em;
-		
-		span {
-			background-color: #E0168F;
-			box-shadow: 0 0 0 0.09em #E0168F, -0.1em 0 0 0.09em #E0168F, 0.1em 0 0 0.09em #E0168F;
-		}
-		
-		small {
-			vertical-align: baseline;
-		}
-	}
-	
-	.cit {
-		text-align: right;
-		font-style: italic;
-		margin-top: 2em;	
-
-		img {
-			margin: 0;
-			max-width: 7em;
-			display: inline;
-			background-color: transparent;
-			vertical-align: middle;
-		}
-	}
-
-	img.plain {
-		background-color: transparent;
-	}
-
-	.controls {
-		transform: scale(0.7) translate(35%, 35%);
-	}
+  font-family: monospace, Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  color: #fff;
 }
 
-.count {
-	counter-increment: trick;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-decoration: underline;
 
-.counter::before {
-	content: '#' counter(trick);
-}
-
-.screenDemo {
-	position: relative;
-	height: 100%;
-
-	.screenDemoImg {
-		position: absolute;
-		width: 30vw;
-		left: 50%;
-		opacity: 0;
-		transition: opacity 500ms;
-		transition-delay: 0;
-
-		.present:not(.stack) & {
-			opacity: 1;
-		}
-
-		&:nth-child(1) {
-			transform: translate(-10%, -52%);
-			.present:not(.stack) & {
-				transition-delay: 1000ms;
-			}
-		}
-
-		&:nth-child(2) {
-			transform: translate(-55%, -10%);
-			.present:not(.stack) & {
-				transition-delay: 2000ms;
-			}
-		}
-
-		&:nth-child(3) {
-			transform: translate(-100%, -50%);
-			.present:not(.stack) & {
-				transition-delay: 3000ms;
-			}
-		}
-
-		&:nth-child(4) {
-			transform: translate(0%, 0%);
-			.present:not(.stack) & {
-				transition-delay: 4000ms;
-			}
-		}
-
-		&:nth-child(5) {
-			transform: translate(-100%, -100%);
-			.present:not(.stack) & {
-				transition-delay: 5000ms;
-			}
-		}
-
-		&:nth-child(6) {
-			transform: translate(0%, -100%);
-			.present:not(.stack) & {
-				transition-delay: 6000ms;
-			}
-		}
-
-		&:nth-child(7) {
-			transform: translate(-100%, 0%);
-			.present:not(.stack) & {
-				transition-delay: 7000ms;
-			}
-		}
-
-		&:nth-child(8) {
-			transform: translate(-50%, -50%);
-			.present:not(.stack) & {
-				transition-delay: 8000ms;
-			}
-		}
-	}
-}
-
-ul li {
-	margin-bottom: 1em !important;
-}
-
-.reveal cite {
-	padding: 2rem;
-	font-style: italic;
-	font-size: 1.2em;
-	position: relative;
-	display: block;
-
-	&::before {
-		content: '“';
-		font-size: 3em;
-		opacity: 0.5;
-		position: absolute;
-		top: 0;
-		left: -2rem;
-	}
-	
-	&::after {
-		content: '”';
-		display: block;
-		font-size: 3em;
-		opacity: 0.5;
-		position: absolute;
-		display: block;
-		bottom: 0;
-		right: 2rem;
-		line-height: 0;
-	}
-
-	+ span {
-		text-align: right;
-		display: block;
-		padding-right: 2rem;
-		position: relative;
-	}
-}
-
-/* EXAMPLES */
-// :EMPTY
-@keyframes empty-fade {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes empty-translate-in {
-	0% {
-		transform: translateX(-2em);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
-
-@keyframes emmpty-loading {
-	0% {
-		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-	}
-	5%,
-	95% {
-		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-	}
-	10%,
-	59% {
-		box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-	}
-	20% {
-		box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-	}
-	38% {
-		box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-	}
-	100% {
-		box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-	}
-}
-
-	@keyframes empty-round {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-.example-empty li:empty {
-	display: none;
-}
-
-.present:not(.stack) .example-empty .main:empty {
-	background: #E0168F;
-	padding: 1em;
-	margin: 1em 0;
-	border-left: 5px solid #c0392b;
-
-	&::before {
-		content: "The app is unavaible now!"
-	}
-}
-
-.present:not(.stack) .example-empty .main2:empty,
-.present:not(.stack) .example-empty .main4:empty {
-	&::after {
-		display: block; 
-		content: '';
-		color: #ffffff;
-		font-size: 90px;
-		text-indent: -9999em;
-		overflow: hidden;
-		width: 1em;
-		height: 1em;
-		border-radius: 50%;
-		margin: 72px auto;
-		position: relative;
-		transform: translateZ(0);
-		animation: emmpty-loading 1.6s infinite ease, empty-round 1.6s infinite ease;
-	}
-}
-
-.present:not(.stack) .example-empty {
-	position: relative;
-}
-.present:not(.stack) .example-empty .main3:empty::after {
-	background: #E0168F;
-	padding: 1em;
-	margin: 1em 0;
-	border-left: 5px solid #c0392b;
-	content: "The app is unavaible now!";
-	display: block;
-	transform: translateY(-100%);
-	animation: empty-fade 1s 5s forwards;
-	opacity: 0;
-}
-
-.present:not(.stack) .example-empty .main3:empty {
-	&::before {
-		display: block; 
-		content: '';
-		color: #ffffff;
-		font-size: 90px;
-		text-indent: -9999em;
-		overflow: hidden;
-		width: 1em;
-		height: 1em;
-		border-radius: 50%;
-		margin: 72px auto;
-		transform: translate(0);
-		animation: emmpty-loading 1.6s infinite ease, empty-round 1.6s infinite ease, empty-fade 1s 4s forwards reverse;
-	}
-}
-
-.present:not(.stack) .example-empty .main4:not(:empty) {
-	animation: empty-fade 1s, empty-translate-in 1s;
-}
-
-// :CHECKED
-.example-checked {
-	input[type=checkbox]:not(.cb__input) {
-
-		width: 100px; height: 100px;
-
-		&:checked {
-			box-shadow: 0 0 50px 10px #E0168F;
-		}
-	}
-
-	input[type=checkbox]:checked ~ .selector {
-		background: #E0168F;
-	}
-}
-
-.cb {
-	$background-background: #fff;
-	$background-border: #E0168F;
-  
-	$height: 1.2em;
-	$width: 1.2em;
-  
-	align-items: center;
-	color: white;
-	display: flex;
-	
-	&__cont {
-		display: inline-block;
-		flex: 0 0 auto;
-		height: $height;
-		overflow: hidden;
-		position: relative;
-		width: $width;
-		margin-right: 0.5em !important;
-		border-radius: 5px;
-	}
-	
-	&__input {
-		border-radius: 0;
-		display: block;
-		height: calc(#{$height} + 3px);
-		left: 0;
-		opacity: 0;
-		padding: 0;
-		position: absolute;
-		top: 0;
-		width: calc(#{$width} + 3px);
-		z-index: 1;
-  
-	  &:hover {
-		cursor: pointer;
-	  }
-	}
-  
-	&__background {
-	  background-color: $background-background;
-	  border: 1px solid $background-border;
-	  border-radius: em-calc(3);
-	  height: $height;
-	  transition: background-color (100ms);
-	  width: $width;
-	  will-change: background-color;
-	}
-  
-	&__input:checked ~ &__background {
-	  background-color: #E0168F;
-	  border-color: #E0168F;
-	  height: $height;
-	  transition: background-color 300ms;
-	  width: $width;
-	}
-  
-	&__svg {
-	  left: 0;
-	  height: 100%;
-	  width: 100%;
-	  position: absolute;
-	  top: 0;
-  
-	  .cb__path {
-		stroke: $background-background;
-		stroke-dasharray: 100;
-		stroke-dashoffset: 100;
-		stroke-width: 0;
-		transition: stroke-dashoffset 300ms (300ms * 0.3),
-					stroke-width 300ms (300ms * 0.3);
-		will-change: stroke-dashoffset, stroke-width;
-	  }
-	}
-  
-	&__input:checked ~ &__svg {
-	  .cb__path {
-		stroke-dashoffset: 0;
-		stroke-width: 10;
-	  }
-	}
-
-	&__label {
-		cursor: pointer;
-	}
+  &:only-child {
+    text-align: center;
   }
-  
-.example-target {
-	div:target {
-		background: #E0168F;
-		color: #fff;
-	}
 }
 
-// Placeholder shown
-.example-placeholder-show {
-	input {
-		font-size: 2em;
-		padding: 0.3em 0.5em;
-		outline: none;
-	}
-
-	input {
-		border: 10px solid black;
-	}
-	
-	input:placeholder-shown {
-		border-color: #E0168F
-	}
-}
-
-// broken image
-
-img { min-height: 50px; position: relative; display: inline-block; text-align: center;}
-
-img::before, img::after {
-	display: block; position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);}
-
-img:before {  
-	content: " ";
-	height: 100%; width: 100%;
-	background-color: #ecf0f1;
-	border: 10px dashed currentColor;}
-
-img:after {  
-	content: "😭 Image not available: " attr(alt);
-	color: #7f8c8d;}
-
-
-.example-external a:not([href*="localhost"]) {
-	color: red;
+.cit {
+  text-align: right;
 }
