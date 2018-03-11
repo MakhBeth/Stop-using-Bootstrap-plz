@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Benjamino Bottone</title>
+  <title>Come JavaScript ha cambiato il CSS
+  </title>
 
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/black.css">
@@ -28,285 +29,745 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <span style="font-size: 1.5em;">Il curioso caso di</span>
+        <span style="font-size: 1.5em;">Come JavaScript ha</span>
         <h1 class="title">
-          <span class="" style="font-size: 10rem;">Benjamino Bottone</span>
+          <span class="" style="font-size: 10rem;">cambiato il CSS</span>
         </h1>
 
         <p class="cit" style="margin-right: 0.7em">
           Davide Di Pumpo
         </p>
       </section>
-      <section style="text-align: center" data-background="#aa210f">
-        <h1 class="" style="font-size: 15rem;">Perché</h1>
+
+      <section>
+        <h1><img src="./images/BTTF.jpg" alt="bttf"></h1>
       </section>
-      <section style="text-align: center">
-        <img src="./images/chat.png" alt="" style="max-height: 50vh">
-      </section>
-      <section data-background="#3355ea">
-        <h1>È una storia</h1>
-      </section>
+        
       <section data-background="./images/cat-party.gif">
         <h1 style="font-size: 5rem; text-align: center">Let's start meaow</h1>
       </section>
-      <section style="text-align: center">
-        <img src="./img/babyme.png" alt="" style="max-height: 60vh">
-      </section>
-      <section data-background="#006b4c">
-        <span>
-          Capitolo 1
-        </span>
-        <h1>
-          Cosa vuoi fare da grande?
-        </h1>
-      </section>
-      <section style="font-size: 3rem">
-        <span>
-          Io onestamente, se mi facessero sta domanda oggi, risponderei:
-        </span>
-        <h3>
-          GRANDE A CHI?
-        </h3>
-      </section>
+
       <section>
-        Da piccolo volevo fare il dentista...
+        <section data-background="#006b4c">
+          <span>Parte 1</span>
+          <h1>Il passato</h1>
+        </section>
+
+        <section>
+          <h1><img src="./images/cssgriffin.gif" alt="css griffin"></h1>
+        </section>
+
+        <section>
+<pre class="big"><code class="js">
+  &lt;style type=&quot;text/javascript&quot;&gt;&#10;    
+    tags.H1.color = &quot;red&quot;;&#10;    
+    tags.p.fontSize = &quot;20pt&quot;;&#10;    
+    with (tags.H3) {&#10;
+      color = &quot;green&quot;;&#10;    
+    }&#10;
+  &lt;/style&gt;
+</code></pre>
+        </section>
+
+        <section data-background="#fff">
+          <h6><img class="plain" src="./images/sass.png" alt="sass logo"></h6>
+        </section>
+
+        <section>
+          <h3>Grazie a Sass abbiamo avuto:</h3>
+          <ul>
+            <li>Le variabili</li>
+            <li>Le funzioni</li>
+            <li>I mixin</li>
+          </ul>
+        </section>
+        
+        <section data-background="#fff">
+          <h1 style="color: white"><img style="width: 300px" class="plain" src="./images/less.png" alt="less logo">
+          <img class="plain" src="./images/stylus.png" alt="stylus logo"></h1>
+        </section>
+        
+        <section data-background="#fff">
+          <h1><img class="plain" src="./images/postcss.svg" alt="postcss logo"></h1>
+        </section>
+
+        <section>
+          <h4>
+            Con Sass eravamo dipendenti da Ruby
+          </h4>
+        </section>
+        
+        <section data-background="#fff">
+          <h1><img class="plain" src="./images/compass.png" alt="compass logo"></h1>
+        </section>
+
+        <section>
+          <h4>Poi, una notte di settembre mi svegliai</h4>
+          <small class="fragment">Era maggio 2009, ma volevo fare la citazione 🎤</small>
+        </section>
+
+        <section data-background="#fff">
+          <h1><img class="plain" src="./images/nodejs.png" alt="postcss logo"></h1>
+        </section>
+
+        <section data-background="#fff" data-background-image="./images/dinos.png">
+          <a style="text-align: right; padding-top: 60vh; display: block; color: black;" href="https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70">reference</a>
+        </section>
+
+        <section data-background-image="./images/tools.png"> 
+        </section>
+
+        <section>
+          <span>Così importante che Sass lo hanno riscritto in Dart 🎉</span>
+        </section>
+
+        <section>
+          il che ci porta a...
+        </section>
       </section>
+      
       <section>
-        Avevo una finita possibilità di scelta
+        <section data-background="#006b4c">
+            <span>Parte 2</span>
+            <h1>Il presente</h1>
+          </section>
+    
+          <section>
+            <p style="font-size: 1.2em">Any application that can be written in JavaScript, will eventually be written in JavaScript.</p>
+            <h6 style="text-align: right">Atwood's Law</h6>
+          </section>
+    
+          <section>
+            No, non sto parlando di CSS in JS
+            <small class="fragment">Lo faremo presto 😇</small>
+          </section>
+    
+          <section>
+            La vera domanda è, perchè ho bisogno di JS per scrivere del CSS?
+          </section>
+    
+          <section data-background="#cc210f">
+            <h2>Per risolverci qualche problema</h2>
+          </section>
       </section>
+
       <section>
-        Quando ero piccolo io bastava studiare e la questione era risolta.
-        <span class="fragment">Una bella promessa...</span>
+        <section data-background="#cc210f">
+          <span>Problema:</span>
+          <h2>Scoping</h2>
+        </section>
+
+        <section data-background="#3F3F3F">
+          <pre class="css big" style="font-size: 0.9em">
+            <code>
+              .title {
+                color: red;
+              }
+              .title {
+                color: green;
+              }
+              .title {
+                color: blue;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <span>
+            Lo abbiamo risolto con:
+          </span>  
+          <h3>
+            BEM, SMACSS, ecc... ecc...
+          </h3>
+        </section>
+
+        <section data-background="white">
+          <div style="display: flex; align-items: center;">
+            <div style="max-width: 50%; display: block;" >
+              <img class="plain" src="./images/gentleman.jpg" alt="">
+            </div>
+            <h2 style="flex: 0 0 50%; color: #333">Gentlemen's agreement</h2>
+          </div>
+        </section>
+
+        <section data-background="white">
+          <h1>
+            <img style="max-width: 400px" class="plain" src="./images/css-modules-logo.png" alt="css modules logo">
+          </h1> 
+        </section>
+
+        <section data-background="#3F3F3F">
+          <pre class="big" style="font-size: 1.2em;"><code class="css">
+        /* style.css */
+        .title {
+          color: green;
+        }
+          </code></pre>
+        </section>
+
+        <section data-background="#3F3F3F">
+          <pre class="big" style="font-size: 1.2em;"><code class="css">
+        ._title_116zl_1 {
+            color: green;
+        }
+          </code></pre>
+        </section>
+
+        <section>
+          html
+          <pre><code class="html">
+  <h1 css-module="title">postcss-modules</h1>
+          </code></pre>
+
+          <br>
+          js
+          <pre><code class="js">
+  import styles from "./style.css";
+  element.innerHTML = 
+    `&lt;div class="${style.title}"&gt;postcss-modules&lt;/div&gt;`;
+          </code></pre>
+
+          <br>
+          pug
+          <pre><code class="jade">
+  h1(class=css.title) postcss-modules
+          </code></pre>
+        </section>
+
+        <section data-background="white">
+          <div style="display: flex; justify-content: space-around;">
+            <div style="width: 30%;">
+              <img class="plain" src="./images/postcss.svg" alt="postcss">            
+            </div>
+            <div style="width: 30%;">
+              <img class="plain" src="./images/webpack.jpg" alt="postcss">            
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <ul>
+            <li>
+              No global scope
+            </li>
+            <li class="fragment">
+              Niente conflitti
+            </li>
+            <li class="fragment">
+              Dipendenze esplicite
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ouFvuwMBgfk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </h2>
+        </section>
+
+        <section>
+            <p data-height="265" data-theme-id="0" data-slug-hash="GQLxjE" data-default-tab="css,result" data-user="MakhBeth" data-embed-version="2" data-pen-title="Most basic shadow DOM" class="codepen">See the Pen <a href="https://codepen.io/MakhBeth/pen/GQLxjE/">Most basic shadow DOM</a> by Davide Di Pumpo (<a href="https://codepen.io/MakhBeth">@MakhBeth</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+      
       </section>
+
+      <section>          
+        <section data-background="#cc210f">
+            <span>Problema:</span>
+            <h2>Condividere</h2>
+          </section>
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 1.2em;" class="scss big"><code>
+        $breakpoints: (
+          small: 640, 
+          medium: 720, 
+          large: 1024
+        );
+            </code></pre>
+          </section>
+          <section>
+            <h3>Come accedere a queste property nel DOM?</h3>
+            <ul>
+              <li>Non renderizzare intere porzioni di codice</li>
+              <li>Utilizzare element query</li>
+              <li>Far partire o meno chiamate ajax</li>
+            </ul>
+          </section>
+
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 1.2em;" class="js big"><code>
+        export default {
+          small: 640, 
+          medium: 720, 
+          large: 1024
+        }
+            </code></pre>
+          </section>
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="js big"><code>
+import breakpoints from "./breakpoints.js"
+            </code></pre>
+          </section>
+
+          <section>
+            <h1><img src="./images/libsass-doc.png" alt="libsass-doc"></h1>
+          </section>
+
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 0.9em;" class="big"><code class="js">
+import breakpoints from "./design/breakpoints"
+/*...*/ 
+loader: "sass-loader",
+options: {
+    data: `$breakpoints: ${breakpoints}`
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <a href="https://github.com/MakhBeth/js-to-scss">
+              <img style="max-height: 60vh" src="./images/js-to-scss.png" alt="js to scss">
+            </a>
+          </section>
+
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 0.8em;" class="big"><code class="js">
+  import breakpoints from "./design/breakpoints"
+  import flattenObjSass from "js-to-scss"
+  /*...*/ 
+  loader: "sass-loader",
+  options: {
+      data: `$breakpoints: 
+        ${flattenObjSass(breakpoints)}`
+  }
+            </code></pre>
+          </section>
+
+          <section>
+            <h1><img src="./images/node-sass-functions.png" alt=""></h1>
+          </section>
+
+          <section>
+            Ad esempio, se volessi condividere quanto accade in un foglio Sass con un altro foglio Sass?
+          </section>
+
+          <section data-background="#3F3F3F">
+            <pre style="font-size: 0.9em;" class="js big"><code>
+'env-map($env-sass-map-name, $map: ())': 
+function (envSassMapName, map) {
+if (!env.sass[envSassMapName.getValue()]) {
+  env.sass[envSassMapName.getValue()] = 
+    new nodeSass.types.Map(0);
+}
+if (map.getLength()) {
+  env.sass[envSassMapName.getValue()] = map;
+}
+return env.sass[envSassMapName.getValue()];
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>E con altri processori CSS?</h1>
+            <a href="https://github.com/macropodhq/postcss-constants">macropodhq/postcss-constants</a>
+          </section>
+      </section>
+
       <section>
-        L’Italia pompava fatturato, i Mondiali di Italia 90 erano la rappresentazione chiarissima di come stava evolvendo e crescendo
-        e godendo questo Paese.
+        <h6>
+          Ok, un gattino per riavere l'attenzione:
+          <img src="./images/Dancing-cat.gif" alt="cat">
+        </h6>
       </section>
-      <section data-background="#cc210f">
-        <span>
-          Capitolo 2
-        </span>
-        <h1>Un giorno incontrai una ragazza dell'artistico</h1>
-      </section>
+      
       <section>
-        <span>Spoiler:</span>
-        <h3 class="fragment">Non me ne innamorai!</h3>
+        <section data-background="#cc210f">
+          <span>Problema:</span>
+          <h2>Condividere a runtime</h2>
+        </section>
+  
+        <section>
+          <pre style="font-size: 1.2em;"><code class="js">
+  Element.style.setProperty(
+    `--custom`, '42px'
+  )
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Facile grazie alle <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties</a></h2>
+          <span class="fragment">aka CSS variables</span>
+        </section>
+
+        <section>
+            <p data-height="265" data-theme-id="0" data-slug-hash="BYEGgq" data-default-tab="js,result" data-user="MakhBeth" data-embed-version="2" data-pen-title="Mouse cursor gradient tracking CSS variables + Javascript vanilla" class="codepen">See the Pen <a href="https://codepen.io/MakhBeth/pen/BYEGgq/">Mouse cursor gradient tracking CSS variables + Javascript vanilla</a> by Davide Di Pumpo (<a href="https://codepen.io/MakhBeth">@MakhBeth</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </section>
+
+        <section>
+          <h1><a href="https://basicscroll.electerious.com"><img src="./images/parallax.jpg" alt="parallax"></a></h1>
+        </section>
+
+        <section>
+          <h2>
+            <iframe src="https://player.vimeo.com/video/164491531" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </h2>
+        </section>
       </section>
+
       <section>
-        Ma scoprii BEN
-        <strike>AFFLECK</strike> ALTRO
+        <section data-background="#cc210f">
+          <span>Problema:</span>
+          <h2>Codice ripetuto</h2>
+        </section>
+        
+
+        <section data-background="#3F3F3F">
+          <pre style="font-size: 1.2em;" class="scss big"><code>
+        .square {
+          height: 10px;
+          width: 10px;
+        }
+          </code></pre>
+        </section >
+        <section data-background="#3F3F3F">
+          <pre style="font-size: 1.2em;" class="scss big"><code>
+    .square {
+      @include square(10px);
+    }
+          </code></pre>
+        </section>
+
+        
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1.2em;" class="scss big"><code>
+      .square {
+        @mixin square 10px;
+      }
+      .square2 {
+        size: 10px;
+      }
+            </code></pre>
+          </section>
+
+        <section data-background="#3F3F3F">
+          <pre style="font-size: 1em;" class="js big"><code>
+ module.exports = (mixinNode, value) => {
+   return {
+       width: value,
+       height: value,
+   }
+ };
+          </code></pre>
+        </section>
+
+        <section>
+          <span>Una domanda sorge spontanea</span>
+          <div class="fragment">
+              <h1 class="">Perché PostCSS?</h1>
+              <span>e non uno degli altri?</span>
+          </div>
+        </section>
+
+        <section>
+          <h1>TEST</h1>
+        </section>
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="js big"><code>
+import size from '../src/mixins/size.js';
+
+test('Should return CSS rules', () => {
+    expect(size(null, '64px')).toEqual({
+        width: '64px',
+        height: '64px',
+    })
+});
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UUl0BZgjm3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </h1>
+        </section>
+
+        <section>
+          <h3>
+            Anche Sass è testabile: <a href="https://github.com/oddbird/true">TRUE</a>
+          </h3>
+        </section>
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="scss big"><code>
+  @include test-module('Zip [function]') {
+    @include test('Zips multiple lists into a single multi-dimensional list') {
+  
+      // Assert the expected results
+      @include assert-equal(
+        zip(a b c, 1 2 3),
+        (a 1, b 2, c 3));
+    }
+  }
+            </code></pre>
+        </section>
       </section>
+
       <section>
-        Le finite possibilità, forse non erano così finite.
+        <section data-background="#cc210f">
+          <span>Problema:</span>
+          <h2>Componentizzare</h2>
+        </section>
+
+        <section data-background="white">
+          <h1><img src="./images/Parental-Control.jpg" alt="parental" class="plain" ></h1>
+        </section>
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="html big"><code>
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;&#10;
+    Accattatill&#10;
+  &lt;/a&gt;
+            </code></pre>
+        </section>
+
+        <section>
+          <h2 style="text-decoration: none; transform: scale(1.2)">
+            💅
+          </h2>
+        </section>
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="html big"><code>
+            &lt;Button primary&gt;&#10;
+              Accattatill&#10;
+            &lt;/Button&gt;
+            </code></pre>
+        </section>
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 0.8em;" class="js big"><code>
+const Button = styled.button`
+  background: ${props => 
+    props.primary 
+      ? 'palevioletred' 
+      : 'white'
+    };
+  color: ${props => props.primary ? 'white' : 'palevioletred'};
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+            </code></pre>
+        </section>
+
+        <section>
+          <span>Una domanda sorge spontanea</span>
+          <div class="fragment">
+              <h1 class="">Perché non le classi?</h1>
+              <span>meno spontanea di prima</span>
+          </div>
+        </section>
+
+        <section>
+          <ul>
+            <li>Eliminano il global space</li>
+            <li>Le dipendenze sono esplicite</li>
+            <li>Condividere costanti è più facile</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>
+            Ma per me il selling point è...
+          </h3>
+        </section>
+
+        <section>
+          suspense
+        </section>
+
+        <section>
+          attesa
+        </section>
+
+        <section>
+          momento verità
+        </section>
+
+        <section>
+          <img src="./images/baby.gif" alt="">
+        </section>
+
+        <section>
+            <h1>L'astrazione</h1>
+        </section>
+
+        <section><h1>
+          ???
+        </h1></section>
+
+        <section data-background="#00A4D3">
+          <h1><img src="./images/react_native_logo.png" alt="react native" class="plain"></h1>
+        </section>
+
+        <section data-background="#F0C4A4">
+          <h1><img src="./images/sketch.png" alt="sketch from react"></h1>
+        </section>
+
       </section>
+
       <section>
-        Potevo fare il madonnaro...
+          <section data-background="#cc210f">
+            <span>Problema:</span>
+            <h2>Regression test</h2>
+          </section>
+
+          <section>
+            <h1>Cos'è?</h1>
+          </section>
+
+          <section>
+            <h1 style="transform: scale(1.25)"><img src="./images/regression.png" alt="regression"></h1>
+          </section>
+
+          <section>
+            <h2>
+              <a href="https://github.com/garris/BackstopJS">BackstopJS</a>
+            </h2>
+          </section>
+
+          
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 0.7em;" class="js big"><code>
+{
+  "id": "OM Client",
+  "viewports": [
+    {"label": "main", "width": 1366, "height": 768}
+  ]
+  {
+    "label": "archive",
+    "url": "https://localhost:9000/archive",
+    "delay": 2000,
+    "hideSelectors": ["#loading-bar-new"],
+    "onBeforeScript": "helpers/localStorageOM.js"
+  }
+} 
+            </code></pre>
+        </section>
+
+
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1em;" class="js big"><code>
+  module.exports = (chromy, scenario) => {
+    chromy
+      .wait('.ic-app')
+      .click('.introjs-skipbutton');
+  };
+            </code></pre>
+        </section>
+
+        
+        <section>
+          <h1><img src="./images/storybook.png" alt="storybook"></h1>
+        </section>
+
       </section>
+        
       <section>
-        Seriamente, iniziai a farmi un sacco di problemi a riguardo
+        <section data-background="#006b4c">
+          <span>Parte 3</span>
+          <h1>Il futuro</h1>
+        </section>
+
+        <section>
+          <h1>Web components</h1>
+        </section>
+        
+        <section>
+          <h1>Project Houdini</h1>
+        </section>
+
+        <section>
+          <h1><img src="./images/jsaccess.png" alt="js access"></h1>
+        </section>
+
+        <section>
+          <h2>CSS parser API</h2>
+          <span>@apply o @extends a run time!</span>
+        </section>
+        <section>
+          <h2>CSS Properties and Values API</h2>
+          <span>Più potere alle CSS properties</span>
+        </section>
+        <section>
+          <h2>CSS Typed OM</h2>
+          <span>Trasformare le stringhe CSS in roba sensata JS</span>
+        </section>
+        <section>
+          <h2>CSS Layout API</h2>
+          <span></span>
+        </section>
+        <section>
+          <blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr">It&#39;s alive... \o/<br><br>(the CSS Layout API that is - not in canary yet, local build atm). <a href="https://t.co/ZydYAnDFaI">pic.twitter.com/ZydYAnDFaI</a></p>&mdash; Ian Kilpatrick (@bfgeek) <a href="https://twitter.com/bfgeek/status/971505916259450880?ref_src=twsrc%5Etfw">March 7, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        </section>
+        <section>
+          <h2>CSS Paint API</h2>
+          <span>Per farla breve una sorta di Canvas</span>
+        </section>          
+        <section data-background="#3F3F3F">
+            <pre style="font-size: 1.2em;" class="css big"><code>
+  .bubble {
+    background: paint('circle');
+  }
+            </code></pre>
+        </section>
+        <section>
+          <a href="https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/">A riguardo</a> 
+        </section>
       </section>
+        
       <section>
-        soprattutto perchè ficcare le dita in bocca alle persone non mi sembrava più sta gran figata
+        <section>
+        <span>Recap</span>
+        <h1>Quindi?</h1>
+        </section>
+        
+        <section>
+          <h3>
+            Abbiamo sempre usato tool per migliorare il nostro CSS  
+          </h3>
+        </section>
+        
+        <section>
+          <h3>
+            JS è già nella nostra build chain, usiamolo a nostro vantaggio
+          </h3>
+          <span>
+            Per risolvere alcuni problemi che possiamo avere con CSS
+          </span>  
+        </section>
+        
+        <section>
+          Houdini ci permetterà di realizzare parecchi dei nostri sogni (e qualche incubo)
+        </section>
+
+        <section>
+          <h2>
+            Dai raga, tutte ste possibilità sono una figata 😃
+          </h2>
+        </section>
+        
       </section>
+
 
       <section data-background="#3355ea">
-        <span>
-          Capitolo 3
-        </span>
-        <h1>Ell'internet fu</h1>
-      </section>
-
-      <section>
-        Se la vita mi aveva dato delle domande, Internet poteva avere le risposte
-      </section>
-
-      <section>
-        O altre domande...
-      </section>
-
-      <section>
-        Ma scoprii l'esistenza del...
-      </section>
-
-      <section>
-        ... pathos ...
-      </section>
-
-      <section>
-        ... momento di pausa ...
-      </section>
-
-      <section>
-        ... ci siamo quasi ...
-      </section>
-
-      <section>
-        <h1>WEB DESIGN</h1>
-      </section>
-
-      <section>
-        e devo 'sta scoperta, ad un uomo online, Bio^Sky
-      </section>
-
-      <section>
-        Ho capito sommi capi cosa volevo fare da grande
-      </section>
-
-      <section>
-        E cosa studia uno all'uni per fare
-        <br> Web DESIGN?
-      </section>
-
-      <section data-background="#cc210f">
-        <span>
-          Capitolo 4
-        </span>
-        <h1>
-          Università di informatica
-        </h1>
-      </section>
-
-      <section>
-        Capitemi, io vengo da un paesino sperduto in una provincia sperduta
-      </section>
-
-      <section>
-        Potevo mai pensare che all'università d'informatica la creatività stesse a
-      </section>
-
-      <section>
-        <h1>ZERO?</h1>
-      </section>
-
-      <section>
-        Ero molto triste
-      </section>
-
-      <section>
-        Ma conosco una ragazza
-      </section>
-
-      <section>
-        <span>Spoiler:</span>
-        <h3 class="fragment">Me ne innamorai!</h3>
-      </section>
-
-      <section data-background="#3355ea">
-        <span>Capitolo 5:</span>
-        <h1>L'accademia di belle arti</h1>
-      </section>
-
-      <section>
-        Molto meglio, ma comunque c'era qualcosa che non quadrava
-      </section>
-
-      <section data-background="#006b4c">
-        <span>Capitolo 6: </span>
-        <h1>Il mondo del lavoro</h1>
-      </section>
-
-      <section>
-        <h1>
-          Agenzie
-        </h1>
-        <span>Amici amici e ti rubano la bici</span>
-      </section>
-
-      <section>
-        <h1>
-          Feltrinelli
-        </h1>
-        <span>The Big Grossi</span>
-      </section>
-
-      <section>
-        Nel frattempo il web design é morto...
-      </section>
-
-      <section>
-        <h1>
-          Fintech
-        </h1>
-        <span>Big Money, Big Money!</span>
-      </section>
-
-      <section>
-        <h1>
-          Startup
-        </h1>
-        <span>Buzzword come se piovesse</span>
-      </section>
-
-      <section>
-        <h1>
-          Demagogo
-        </h1>
-        <span>Formare le nuove leve</span>
-      </section>
-
-      <section>
-        Sono stato fortunato
-      </section>
-
-      <section>
-        Ma, una cosa accomuna tutte ste esperienze...
-      </section>
-
-      <section>
-        ...cambiare titoli lavorativi era delirante...
-      </section>
-
-      <section data-background="#3355ea">
-        <span></span> Capitolo 7:
-        <h1>I colloqui da grande!</h1>
-        ma tu sei un designer o un developer?
-      </section>
-
-      <section>
-        ma tu sei un designer o un developer?
-      </section>
-
-      <section>
-        ma tu sei un designer o un developer?
-      </section>
-
-      <section>
-        ma tu sei un designer o un developer?
-      </section>
-
-      <section>
-        Giuro stavo sbroccando
-      </section>
-
-      <section>
-        fino a che...
-      </section>
-
-      <section>
-        Si fottano i titoli, le posizioni
-      </section>
-
-      <section data-background="#3355ea">
-        <h2>Siamo noi, la nostra generazione</h2>
-      </section>
-      <section data-background="#cc210f">
-        <h1>Non ci riconosciamo più</h1>
-      </section>
-
-      <section>
-        Siate quel tipo di persona che vi hanno fatto capire che...
-      </section>
-
-      <section data-background="#006b4c">
-        <h1>Fate il lavoro più figo del mondo</h1>
-        <span class="fragment">Qualsiasi esso sia</span>
-      </section>
-
-      <section data-background="#3355ea">
-        <h1>Grazie</h1>
-      </section>
-
-      <section data-background="#3355ea">
+        <h1 style="text-align: center;">Grazie</h1>
         <div style="display: flex; justify-content: center; align-items: center;">
           <div style="margin-right: 5%; width: 33%;">
             <img style="max-height: 75vh; background: none;" src="images/me.svg" alt="me" class="plain" />
