@@ -190,61 +190,87 @@
             <h2 style="flex: 0 0 50%; color: #333">Gentlemen's agreement</h2>
           </div>
         </section>
+  
 
         <section data-background="white">
           <h1>
             <img style="max-width: 400px" class="plain" src="./images/css-modules-logo.png" alt="css modules logo">
           </h1> 
+        </section>  
+
+        <section data-background="#3F3F3F">
+            <pre class="big" style="font-size: 0.9em;"><code class="">
+├── Accordion
+│   ├── Accordion.html
+│   └── Accordion.module.css
+├── BadgeStep
+│   ├── BadgeStep.html
+│   └── BadgeStep.module.css
+└── BlogPosts
+    ├── BlogPosts.html
+    └── BlogPosts.module.css
+            </code></pre>
         </section>
 
         <section data-background="#3F3F3F">
-          <pre class="big" style="font-size: 1.2em;"><code class="css">
-        /* style.css */
-        .title {
-          color: green;
-        }
-          </code></pre>
+            <pre class="big" style="font-size: 1em;"><code class="css">
+        /* Accordion.module.css */
+        .title { color: green; }
+
+        /* BadgeStep.module.css */
+        .title { color: green; }
+
+        /* BlogPosts.module.css */
+        .title { color: green; }
+            </code></pre>
         </section>
 
+        <section data-background="white">
+            <div style="display: flex; justify-content: space-around;">
+              <div style="width: 30%;">
+                <img class="plain" src="./images/postcss.svg" alt="postcss">            
+              </div>
+              <div style="width: 30%;">
+                <img class="plain" src="./images/webpack.jpg" alt="postcss">            
+              </div>
+            </div>
+        </section>
+        
         <section data-background="#3F3F3F">
-          <pre class="big" style="font-size: 1.2em;"><code class="css">
-        ._title_116zl_1 {
-            color: green;
-        }
+          <pre class="big" style="font-size: 1em;"><code class="css">
+    /* Accordion.css */
+    .Accordion--title--axYow2l { color: green; }
+
+    /* BadgeStep.css */
+    .BadgeStep--title--9scas2 { color: green; }
+
+    /* BlogPosts.css */
+    .BlogPosts--title--Fsvloa { color: green; }
           </code></pre>
         </section>
 
         <section>
-          html
-          <pre><code class="html">
-  <h1 css-module="title">postcss-modules</h1>
-          </code></pre>
+            html
+            <pre><code class="html">
+    <h1 css-module="title">postcss-modules</h1>
+            </code></pre>
+  
+            <br>
+            js
+            <pre><code class="js">
+    import styles from "./component.module.css";
+    element.innerHTML = 
+      `&lt;div class="${style.title}"&gt;postcss-modules&lt;/div&gt;`;
+            </code></pre>
+  
+            <br>
+            pug
+            <pre><code class="jade">
+    h1(class=css.title) postcss-modules
+            </code></pre>
+          </section>
 
-          <br>
-          js
-          <pre><code class="js">
-  import styles from "./style.css";
-  element.innerHTML = 
-    `&lt;div class="${style.title}"&gt;postcss-modules&lt;/div&gt;`;
-          </code></pre>
-
-          <br>
-          pug
-          <pre><code class="jade">
-  h1(class=css.title) postcss-modules
-          </code></pre>
-        </section>
-
-        <section data-background="white">
-          <div style="display: flex; justify-content: space-around;">
-            <div style="width: 30%;">
-              <img class="plain" src="./images/postcss.svg" alt="postcss">            
-            </div>
-            <div style="width: 30%;">
-              <img class="plain" src="./images/webpack.jpg" alt="postcss">            
-            </div>
-          </div>
-        </section>
+        <section data-background-image="./images/credimi.png">.</section>
 
         <section>
           <ul>
@@ -265,20 +291,16 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ouFvuwMBgfk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </h2>
         </section>
-
-        <section>
-            <p data-height="265" data-theme-id="0" data-slug-hash="GQLxjE" data-default-tab="css,result" data-user="MakhBeth" data-embed-version="2" data-pen-title="Most basic shadow DOM" class="codepen">See the Pen <a href="https://codepen.io/MakhBeth/pen/GQLxjE/">Most basic shadow DOM</a> by Davide Di Pumpo (<a href="https://codepen.io/MakhBeth">@MakhBeth</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </section>
-
       
       </section>
 
-      <section>          
+      <section>
         <section data-background="#cc210f">
             <span>Problema:</span>
             <h2>Condividere</h2>
+            <small class="fragment">Tipo tra Sass e JS</small>
           </section>
+          
           <section data-background="#3F3F3F">
             <pre style="font-size: 1.2em;" class="scss big"><code>
         $breakpoints: (
@@ -298,6 +320,21 @@
           </section>
 
           <section data-background="#3F3F3F">
+              <pre style="font-size: 1.2em;" class="scss big"><code>
+          $breakpoints: (
+            small: 640, 
+            medium: 720, 
+            large: 1024
+          );
+              </code></pre>
+            </section>
+          
+            <section>
+              Come condividerei questo in JS?
+            </section>
+
+            
+          <section data-background="#3F3F3F">
             <pre style="font-size: 1.2em;" class="js big"><code>
         export default {
           small: 640, 
@@ -310,6 +347,10 @@
             <pre style="font-size: 1em;" class="js big"><code>
 import breakpoints from "./breakpoints.js"
             </code></pre>
+          </section>
+
+          <section>
+            E probabilmente il nostro compilatore Sass viene lanciato da JS (Gulp, Webpack, whatelse)
           </section>
 
           <section>
@@ -388,18 +429,29 @@ return env.sass[envSassMapName.getValue()];
           <span>Problema:</span>
           <h2>Condividere a runtime</h2>
         </section>
-  
+
+        <section>
+          Aggiornare il CSS tramite JS
+        </section>
+
         <section>
           <pre style="font-size: 1.2em;"><code class="js">
-  Element.style.setProperty(
-    `--custom`, '42px'
-  )
+Element.style.left = "42px";
           </code></pre>
         </section>
 
         <section>
-          <h2>Facile grazie alle <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties</a></h2>
+          <h3>Ancora più facile grazie alle <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties</a></h3>
           <span class="fragment">aka CSS variables</span>
+        </section>
+
+
+        <section>
+          <pre style="font-size: 1.2em;"><code class="js">
+    Element.style.setProperty(
+      `--custom`, '42px'
+    )
+          </code></pre>
         </section>
 
         <section>
@@ -435,6 +487,7 @@ return env.sass[envSassMapName.getValue()];
         </section >
         <section data-background="#3F3F3F">
           <pre style="font-size: 1.2em;" class="scss big"><code>
+    // Sass
     .square {
       @include square(10px);
     }
@@ -444,6 +497,7 @@ return env.sass[envSassMapName.getValue()];
         
         <section data-background="#3F3F3F">
             <pre style="font-size: 1.2em;" class="scss big"><code>
+      // PostCSS
       .square {
         @mixin square 10px;
       }
@@ -523,14 +577,14 @@ test('Should return CSS rules', () => {
         </section>
 
         <section data-background="white">
-          <h1><img src="./images/Parental-Control.jpg" alt="parental" class="plain" ></h1>
+          <h1><img src="./images/button.png" alt="btn" class="plain"></h1>
         </section>
 
         <section data-background="#3F3F3F">
             <pre style="font-size: 1em;" class="html big"><code>
   &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;&#10;
-    Accattatill&#10;
-  &lt;/a&gt;
+    Accattatil&#10;
+  &lt;/a&gt; 
             </code></pre>
         </section>
 
@@ -543,7 +597,7 @@ test('Should return CSS rules', () => {
         <section data-background="#3F3F3F">
             <pre style="font-size: 1em;" class="html big"><code>
             &lt;Button primary&gt;&#10;
-              Accattatill&#10;
+              Accattatil&#10;
             &lt;/Button&gt;
             </code></pre>
         </section>
@@ -702,14 +756,6 @@ const Button = styled.button`
           <span>@apply o @extends a run time!</span>
         </section>
         <section>
-          <h2>CSS Properties and Values API</h2>
-          <span>Più potere alle CSS properties</span>
-        </section>
-        <section>
-          <h2>CSS Typed OM</h2>
-          <span>Trasformare le stringhe CSS in roba sensata JS</span>
-        </section>
-        <section>
           <h2>CSS Layout API</h2>
           <span></span>
         </section>
@@ -740,7 +786,7 @@ const Button = styled.button`
         
         <section>
           <h3>
-            Abbiamo sempre usato tool per migliorare il nostro CSS  
+            Usiamo da anni tool per migliorare il nostro CSS  
           </h3>
         </section>
         
@@ -751,10 +797,6 @@ const Button = styled.button`
           <span>
             Per risolvere alcuni problemi che possiamo avere con CSS
           </span>  
-        </section>
-        
-        <section>
-          Houdini ci permetterà di realizzare parecchi dei nostri sogni (e qualche incubo)
         </section>
 
         <section>
