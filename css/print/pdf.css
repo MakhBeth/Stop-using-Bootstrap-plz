@@ -169,3 +169,7 @@ p.codepen {
 .frame {
 	display: block !important;
 }
+
+* {
+	transform: none !important;
+}

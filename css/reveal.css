@@ -280,7 +280,7 @@ body {
   height: 100%;
   width: 0px;
   background-color: #000;
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: width 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /*********************************************
  * SLIDE NUMBER
@@ -341,8 +341,8 @@ body {
   z-index: 10;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  transition: -webkit-transform-origin 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), -webkit-transform 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: transform-origin 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), transform 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: -webkit-transform-origin 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), -webkit-transform 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: transform-origin 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), transform 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /* Global transition speed settings */
 .reveal[data-transition-speed="fast"] .slides section {
@@ -812,7 +812,7 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+  transition: all 700ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 .reveal .slide-background.stack {
   display: block; }
