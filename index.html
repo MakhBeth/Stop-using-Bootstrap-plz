@@ -1,219 +1,73 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/simple.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				React JS Day
+				<h2>Web Animation API</h2>
+			</section>
+			<section data-background="./images/cat-party.gif">
+				<h2 style="color: #fff; text-transform: uppercase; font-weight: 900; text-shadow: 0.05em 0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black;">Let's
+					start meow</h2>
+			</section>
+			<section>
+				<h1>What they are?</h1>
+				<p class="cit">The Web Animations API provides a common language for browsers and developers to describe animations
+					on DOM elements.</p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API" target="_blank" class="cit">MDN</a>
+			</section>
+			<section>
 				<section>
-					Milano JS
-					<h2>Web Animation API</h2>
-				</section>
-				<section style="position: relative; text-align: center;">
-					<div id="logo">
-						<div id="logo-line-1" class="logo-line"></div>
-						<div id="logo-line-2" class="logo-line"></div>
-						<div id="logo-line-3" class="logo-line"></div>
-						<div id="logo-line-4" class="logo-line"></div>
-						<div id="logo-line-5" class="logo-line"></div>
-						<div id="logojs">
-							<svg width="1em" height="1em" viewBox="0 0 692 492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path d="M507.8,0.813c-37.8,3 -69.5,16.6 -93.1,40c-24.3,24.1 -35.9,53.5 -35.9,90.8c0,55.8 22.9,94.8 74,125.7c13,7.8 30.7,16.3 61.3,29.5c41.7,17.9 57.2,26.4 67.1,37c12.2,13.1 15.6,34 7.9,50c-1.5,3.1 -5.4,8.3 -8.9,11.8c-11.8,11.9 -30.4,18.2 -53.5,18.2c-39,0 -68.1,-16 -91.5,-50.6c-3.2,-4.6 -6.1,-8.4 -6.5,-8.4c-0.9,0 -77,43.9 -78.6,45.4c-1,0.9 -0.2,3 3.7,9.4c30.4,51.2 77.9,81.2 142.1,89.8c16.8,2.3 48.3,2.2 64.4,0c40.4,-5.7 70.7,-19.1 94.2,-41.9c25,-24.1 37.3,-55.3 37.3,-94.4c0,-25 -4.1,-44.5 -13.4,-63.8c-6.4,-13.2 -12.8,-22.1 -23.8,-33.3c-21.1,-21.4 -48.4,-37.6 -102.9,-61c-41.2,-17.7 -55,-25.3 -64.1,-35c-8.7,-9.3 -12.4,-20.2 -11.6,-33.8c0.7,-10.8 3.7,-18.1 10.3,-25.2c9.5,-10.3 20.5,-14.6 37.5,-14.5c19.3,0 31.8,5 44.5,17.8c4.5,4.4 10.3,11.5 13,15.8c3.1,4.9 5.4,7.6 6.2,7.3c2.6,-1.1 75.3,-48.1 75.3,-48.8c0,-0.4 -3.7,-6.2 -8.2,-13c-9.6,-14.4 -26.9,-32.4 -38.8,-40.3c-22,-14.6 -45.5,-22.1 -76.5,-24.4c-15.2,-1.2 -17.2,-1.2 -31.5,-0.1Z" style="fill-rule:nonzero;"/><path d="M196.5,182.513l-0.3,176.8l-2.2,8.3c-2.9,10.9 -6.3,17.4 -12.3,23.4c-8.4,8.4 -19.2,11.9 -37.2,12c-25.7,0.1 -41.1,-10.8 -59,-41.4c-2.9,-4.8 -5.5,-8.7 -5.8,-8.6c-0.4,0.2 -18.5,11.1 -40.2,24.2l-39.5,24l3,6c17.9,35.7 48.9,62.7 86.2,75.1c39.4,13.1 90,11.9 127.1,-3c44.5,-18 70.6,-55.2 77.5,-110.5c0.6,-5.6 1,-68.1 1,-185.7l0,-177.3l-49,0l-48.9,0l-0.4,176.7Z" style="fill-rule:nonzero;"/></svg>
-						</div>
-					</div>
-					<div class="snowfall fragment">
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-						<div class="snow"></div>
-					</div>
-				</section>
-				<section data-background="./images/cat-party.gif">
-					<h2 style="color: #fff; text-transform: uppercase; font-weight: 900; text-shadow: 0.05em 0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black;">Let's start meow</h2>
-					<p class="fragment" style="text-align: left;  white; text-shadow: 0.05em 0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black; color: white;">Anche perché in un minuto vi ho fatto vedere n'animazione e ringraziato tutti, mancano solo 6 minuti, non vorrei andare lungo che poi chi te lo sente Granze. Mo' fa finta di ridere, ma guardategli gli occhi. <br> Io c'ho paura.</p>
+					<h1 style="font-size: 3em;">How we animate now?</h1>
+					<p>
+						<small>(Not in order)</small>
+					</p>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval" target="_blank"><code>setInterval</code></a></li>
+						<li><a href="http://api.jquery.com/animate/" target="_blank"><code>jQuery.animate()</code></a></li>
+						<li><a href="https://developer.mozilla.org/it/docs/Web/API/window/requestAnimationFrame" target="_blank"><code>requestAnimationFrame()</code></a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">CSS
+								animations</a> or libs like <a href="https://greensock.com/gsap">GSAP</a> e <a href="http://velocityjs.org"
+							 target="_blank">Velocity</a></li>
+					</ul>
 				</section>
 				<section>
-					<h1>Cosa sono?</h1>
-					<p class="cit">The Web Animations API provides a common language for browsers and developers to describe animations on DOM elements.</p>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API" target="_blank" class="cit">MDN</a>
+					<h1>Set interval</h1>
+					<p><small class="">seriously?</small></p>
+					<p>It's not accurate and the animations can drop frames</p>
 				</section>
 				<section>
-					<section>
-						<h1 style="font-size: 3em;">Come animiamo oggi?</h1>
-						<p>
-							<small>(In classifica)</small>
-						</p>
-						<ul>
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval" target="_blank"><code>setInterval</code></a></li>
-							<li><a href="http://api.jquery.com/animate/" target="_blank"><code>jQuery.animate()</code></a></li>
-							<li><a href="https://developer.mozilla.org/it/docs/Web/API/window/requestAnimationFrame" target="_blank"><code>requestAnimationFrame()</code></a></li>
-							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">CSS animations</a> o librerie come <a href="https://greensock.com/gsap">GSAP</a> e <a href="http://velocityjs.org" target="_blank">Velocity</a></li>
-						</ul>
-					</section>
-					<section>
-						<h1>Set interval</h1>
-						<p><small class="">seriamente?</small></p>
-						<p>È impreciso e le animazioni possono scattare parecchio</p>
-					</section>
-					<section>
-						<h1>jQuery Animate</h1>
-						<p>Oltre al fatto di avere di mezzo jQuery, ha seri problemi prestazionali</p>
-					</section>
-					<section>
-						<h1 style="font-size: 2.5em">Request Animation Frame</h1>
-						<pre><code class="js">var start = null;
+					<h1>jQuery Animate</h1>
+					<p>Ok, jQuery? If this is not enough, it has a lot of performance issues</p>
+				</section>
+				<section>
+					<h1 style="font-size: 2.5em">Request Animation Frame</h1>
+					<small>It's ok but is... a lot imperative and you have to modify DOM elements</small>
+					<pre><code class="js">var start = null;
 var element = document.getElementById('SomeElementYouWantToAnimate');
 element.style.position = 'absolute';
 
@@ -227,32 +81,35 @@ function step(timestamp) {
 }
 
 window.requestAnimationFrame(step);</code></pre>
-					</section>
-					<section>
-						<h1>CSS</h1>				
-						<p>Sono ok per la maggiorparte dei casi ma: non possono essere composte sullo stesso elemento, è difficile lanciarle in parallelo.
-							<br>
-							È impossibile animare valori che cambiano dinamicamente (provate un vertical accordion con testo ed height auto)!
-						</p>
-					</section>
-					<section>
-						<h1>Librerie esterne</h1>
-						<small>Come se non avessimo già abbastanza dipendenze</small> <br>
-						Ok se fate un utilizzo massivo di animazioni del progetto, ma: <br>
-						<ul>
-							<li>È comunque una libreria esterna</li>
-							<li>Probabilmente state sparando ad una mosca con un cannone</li>
-							<li>Per quanto ne dica GSAP non sono uno standard</li>
-						</ul>
-					</section>
 				</section>
 				<section>
-					<section>
-						<h1>Quindi?</h1>
-						<h2 class="fragment" style="font-weight: 100;">Vediamo un po' di codice</h2>
-					</section>
-					<section>
-						<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
+					<h1>CSS</h1>
+					<p>Super ok for most of use cases: but <br />
+						they can't be composed on the same element<br />
+						it's difficult to parallel launch them
+						<br>
+						It's impossible to animate values that change dinamically
+						(Like a vertical accordion on text, try it!)
+					</p>
+				</section>
+				<section>
+					<h1>Libraries</h1>
+					<small>Yeah another dependency</small> <br>
+					They are ok if you are in an heavly animated project BUT:<br>
+					<ul>
+						<li>You're probably shooting a fly with an heavy cannon</li>
+						<li>Unlinke GSAP says, they are not standards</li>
+						<li>Maybe you can avoid the external dependency</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>So?</h1>
+					<h2 class="fragment" style="font-weight: 100;">Let's see the code</h2>
+				</section>
+				<section>
+					<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
     { transform: 'scale(1)', opacity: 1, offset: 0 },
     { transform: 'scale(.5)', opacity: .5, offset: .3 },
     { transform: 'scale(.6)', opacity: .6, offset: 1 }
@@ -264,12 +121,12 @@ window.requestAnimationFrame(step);</code></pre>
     direction: 'alternate', //'normal', 'reverse', etc.
     fill: 'forwards' //'backwards', 'both', 'none', 'auto'
   });</code></pre>
-					</section>
-					<section>
-						Oppure in puro CSS:
-					</section>
-					<section>
-						<pre><code class="css">@keyframes emphasis {
+				</section>
+				<section>
+					Or in CSS:
+				</section>
+				<section>
+					<pre><code class="css">@keyframes emphasis {
   0% {
     transform: scale(1); 
     opacity: 1;}
@@ -283,10 +140,9 @@ window.requestAnimationFrame(step);</code></pre>
 #toAnimate {
   animation: emphasis 700ms ease-in-out 10ms infinite alternate forwards;
 }</code></pre>
-					<div class="achievment"><img src="./images/achievment.png" alt="" class="plain"></div>
-					</section>
-					<section>
-						<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
+				</section>
+				<section>
+					<pre><code class="js">  var player = document.getElementById('toAnimate').animate([
     { transform: 'scale(1)', opacity: 1, offset: 0 },
     { transform: 'scale(.5)', opacity: .5, offset: .3 },
     { transform: 'scale(.6)', opacity: .6, offset: 1 }
@@ -298,38 +154,51 @@ window.requestAnimationFrame(step);</code></pre>
     direction: 'alternate', //'normal', 'reverse', etc.
     fill: 'forwards' //'backwards', 'both', 'none', 'auto'
   });</code></pre>
-					</section>
-					<section>
-  						<div id="cat1" style="text-align:center"><img src="./images/cat.png" alt="" class="plain"></div>
-						<script type="text/javascript">
-							var cat1 = document.getElementById('cat1').animate([
-								{ transform: 'scale(1)', opacity: 1, offset: 0 },
-								{ transform: 'scale(.5)', opacity: .5, offset: .3 },
-								{ transform: 'scale(.6)', opacity: .6, offset: 1 }
-							], {
-								duration: 700, //milliseconds
-								easing: 'ease-in-out', //'linear', a bezier curve, etc.
-								delay: 10, //milliseconds
-								iterations: Infinity, //or a number
-								direction: 'alternate', //'normal', 'reverse', etc.
-								fill: 'forwards' //'backwards', 'both', 'none', 'auto'
-							});
-						</script>
-					</section>
 				</section>
 				<section>
-					<section>
-						<h6>Andando un po' più a fondo</h6>
-						<pre><code class="js">var animation = element.animate(keyframes, options); </code></pre>
-					</section>
-					<section>
-						<h6><code class="js">keyframes</code></h6>
-						<p>È un oggetto che contiene tutte le proprietà animabili, può essere formattato in due modi:</p>
-						<pre><code class="js">element.animate({
+					<div id="cat1" style="text-align:center"><img src="./images/cat.png" alt="" class="plain"></div>
+					<script type="text/javascript">
+						var cat1 = document.getElementById('cat1').animate([{
+								transform: 'scale(1)',
+								opacity: 1,
+								offset: 0
+							},
+							{
+								transform: 'scale(.5)',
+								opacity: .5,
+								offset: .3
+							},
+							{
+								transform: 'scale(.6)',
+								opacity: .6,
+								offset: 1
+							}
+						], {
+							duration: 700, //milliseconds
+							easing: 'ease-in-out', //'linear', a bezier curve, etc.
+							delay: 10, //milliseconds
+							iterations: Infinity, //or a number
+							direction: 'alternate', //'normal', 'reverse', etc.
+							fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+						});
+					</script>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h6>Let's see in depth</h6>
+					<pre><code class="js">var animation = element.animate(keyframes, options); </code></pre>
+				</section>
+				<section>
+					<h6><code class="js">keyframes</code></h6>
+					<p>
+						It's an object that contains all the animatable properties.
+						It can be expresse in two ways:</p>
+					<pre><code class="js">element.animate({
   opacity: [ 0, 1 ],          // [ from, to ]
   color:   [ "#fff", "#000" ] // [ from, to ]
-}, 2000);</code></pre> oppure:
-						<pre><code class="js">element.animate([ 
+}, 2000);</code></pre> or:
+					<pre><code class="js">element.animate([ 
   { // from
     opacity: 0,
     color: "#fff"
@@ -339,64 +208,73 @@ window.requestAnimationFrame(step);</code></pre>
  ​   color: "#000"
   }
 ], 2000);</code></pre>
-					</section>
-					<section>
-						<h6><code class="js">options</code></h6>
-						<p>
-							Un <strong>intero</strong> che rappresenta la durata dell'animazione in millisecondi oppure un <strong>oggetto</strong> che contiene una o più delle seguenti proprietà:
-						</p>
-						<ul>	
-							<li><code class="js">id</code></li>
-							<li><code class="js">delay</code></li>
-							<li><code class="js">direction</code></li>
-							<li><code class="js">duration</code></li>
-							<li><code class="js">easing</code></li>
-							<li><code class="js">endDelay</code></li>
-							<li><code class="js">fill</code></li>
-							<li><code class="js">iterationStart</code></li>
-							<li><code class="js">iterations</code></li>
-						</ul>
-					</section>
-					<section>
-						<h2>Sì, in pratica sono le proprietà <code>animation-</code> del CSS esposte su JS</h2>
-					</section>
 				</section>
 				<section>
-					<section>
-						<h3>E fin qua è quasi CSS in JS</h3>
-					</section>
-					<section>
-						<h2>La console di Chrome</h2>
-						<img src="./images/chrome-console.png" alt="">
-					</section>
-					<section>
-						Esatto, <code>animate()</code> ritorna un oggetto di tipo Animation con i propri metodi e proprietà. Ed è qui che arriva il bello!
-					</section>
-					<section>
-						<h3>Metodi</h3>
-						<ul>
-							<li><code>cancel()</code> torna allo stato iniziale</li>
-							<li><code>finish()</code> salta alla fine del dell'animazione</li>
-							<li><code>pause()</code> mette l'animazione in pausa</li>
-							<li><code>play()</code> mette l'animazione in esecuzione</li>
-							<li><code>reverse()</code> riproduce l'animazione al contrario</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Proprietà</h3>
-						<ul>
-							<li><code>currentTime</code> mostra/setta il tempo di esecuzione in ms</li>
-							<li><code>id</code> ritorna l'id</li>
-							<li><code>oncancel</code> esegue una funzione quando l'animazione viene cancellata dall'apposito metodo</li>
-							<li><code>onfinish</code> esegue una funzione quando l'animazione termina</li>
-							<li><code>playbackRate</code> la "velocità" dell'animazione, può essere negativa </li>
-							<li><code>playState</code> mostra/setta lo stato di esecuzione</li>
-							<li><code>startTime</code></li>
-						</ul>
-					</section>
-					<section>
-						<h3>Promise</h3>
-						<pre><code class="js">//set up 1 second animation to fade box out
+					<h6><code class="js">options</code></h6>
+					<p>
+						An <strong>integer</strong> rapresenting the duration in milliseconds
+						or an <strong>object that contains the following properties</strong>
+					</p>
+					<ul>
+						<li><code class="js">id</code></li>
+						<li><code class="js">delay</code></li>
+						<li><code class="js">direction</code></li>
+						<li><code class="js">duration</code></li>
+						<li><code class="js">easing</code></li>
+						<li><code class="js">endDelay</code></li>
+						<li><code class="js">fill</code></li>
+						<li><code class="js">iterationStart</code></li>
+						<li><code class="js">iterations</code></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Yes, basically they are the CSS <code>animation-</code> properties exposed on JS</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>And until now it's basically a sort of CSS in JS :troll:</h3>
+				</section>
+				<section>
+					<h2>Chrome console:</h2>
+					<img src="./images/chrome-console.png" alt="">
+				</section>
+				<section>
+					YES! <code>animate()</code> returns an Animation type object
+					with methods and properties, and now the fun begins!
+				</section>
+				<section>
+					<h3>Methods</h3>
+					<ul>
+						<li><code>cancel()</code> the animation go back to the initial state</li>
+						<li><code>finish()</code> jumps to the end of the animation</li>
+						<li><code>pause()</code> pause the animation</li>
+						<li><code>play()</code> play the animation</li>
+						<li><code>reverse()</code> the animation will be played in reverse</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Properties</h3>
+					<ul>
+						<li><code>currentTime</code> shows/sets the execution time in ms</li>
+						<li><code>id</code> returns the animation id</li>
+						<li><code>oncancel</code> runs a callback when the animation is cancelled by the <code>cancel()</code> method</li>
+						<li><code>onfinish</code> runs a callback when the animation is finished</li>
+						<li><code>playbackRate</code> can be a negative number</li>
+						<li><code>playState</code> shows/sets the animation state</li>
+						<li><code>startTime</code></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Promise</h3>
+					<ul>
+						<li><code>finished</code></li>
+						<li><code>ready</code></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Promise</h3>
+					<pre><code class="js">//set up 1 second animation to fade box out
 var box = document.getElementById('box');
 var animation = box.animate([{ opacity: 1 }, { opacity: 0 }], 1000);
 
@@ -412,65 +290,63 @@ animation.finished.then(finishedHandler, canceledHandler);
 
 //the effective successful equivalent with the onfinish callback
 animation.onfinish = finishedHandler;</code></pre>
-						<a href="http://danielcwilson.com/blog/2016/03/animations-and-promises/" class="cit">Dan Wilson</a>
-					</section>
-					<section>
-						<h3>Promise</h3>
-						<ul>
-							<li><code>finished</code></li>
-							<li><code>ready</code></li>
-						</ul>
-					</section>
+					<a href="http://danielcwilson.com/blog/2016/03/animations-and-promises/" class="cit">Dan Wilson</a>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Bonus:</h2>
 				</section>
 				<section>
-					<section>
-						<h2>Altre cosucce da sapere</h2>
-					</section>
-					<section>
-						<h3>Un elemento può ovviamente avere più animazioni</h3>
-						<pre><code class="js">var animated = document.getElementById('cat');
+					<h3>An element can have multiple animations</h3>
+					<pre><code class="js">var animated = document.getElementById('cat');
 var purr = animated.animate({}, 1000);
 var rotate = animated.animate({}, 2000);
 var jump = animated.animate({}, 3500);</code></pre>
-					</section>
-					<section>
-						<h3>Potete vedere tutte le animazioni presenti attraverso il metodo:</h3>
-						<code>document.getAnimations()</code>
-					</section>
 				</section>
 				<section>
-					<section>
-						<p>
-							Ma veniamo al momento da tutti agognato!
-						</p>
-						<p class="fragment">
-							Il momento del ricordo
-						</p>
-					</section>
-					<section>
-						<img src="./images/flash.png" alt="">
-					</section>
-					<section>
-						<h1>È possibile animare su un path!!1!1</h1>
-					</section>
-					<section>
-						<div id="containerCat">
-							<div id="cat2">
-								<img src="./images/cat.png" alt="" class="plain"><br>
-								MilanoJS
-							</div>
+					<h3>
+						All the animations can be returned by this function:</h3>
+					<code>document.getAnimations()</code>
+				</section>
+			</section>
+			<section>
+				<section>
+					<p>
+						But... the moment that everyone was waiting for!
+					</p>
+					<p class="fragment">
+						Amarcord moment
+					</p>
+				</section>
+				<section>
+					<img src="./images/flash.png" alt="">
+				</section>
+				<section>
+					<h1>You can animate on a path!!1!1</h1>
+				</section>
+				<section>
+					<div id="containerCat">
+						<div id="cat2">
+							<img src="./images/cat.png" alt="" class="plain"><br>
+							ReactJSDay
 						</div>
-						<script>
-							var path = `path("M300.358,297.675c55.955,57.158 83.03,107.698 141.392,107.698c58.362,0 105.292,-46.93 105.292,-105.292c0,-58.361 -46.93,-105.893 -105.292,-105.292c-58.362,0.602 -80.022,43.321 -132.969,102.886c-53.549,52.947 -94.462,107.698 -152.824,107.698c-58.362,0 -105.292,-46.93 -105.292,-105.292c0,-58.361 46.93,-105.292 105.292,-105.292c58.362,0 98.072,55.956 144.401,102.886Z")`;
-							var p = document.getElementById('cat2');
-							var animation = p.animate({
-							offsetPath: [path, path ],
+					</div>
+					<script>
+						var path =
+							`path("M300.358,297.675c55.955,57.158 83.03,107.698 141.392,107.698c58.362,0 105.292,-46.93 105.292,-105.292c0,-58.361 -46.93,-105.893 -105.292,-105.292c-58.362,0.602 -80.022,43.321 -132.969,102.886c-53.549,52.947 -94.462,107.698 -152.824,107.698c-58.362,0 -105.292,-46.93 -105.292,-105.292c0,-58.361 46.93,-105.292 105.292,-105.292c58.362,0 98.072,55.956 144.401,102.886Z")`;
+						var p = document.getElementById('cat2');
+						var animation = p.animate({
+							offsetPath: [path, path],
 							offsetDistance: [0, "100%"]
-							}, {duration: 4000, iterations: Infinity});
-						</script>
-					</section>
-					<section>
-						<pre><code class="js">
+						}, {
+							duration: 4000,
+							iterations: Infinity
+						});
+					</script>
+				</section>
+				<section>
+					<pre><code class="js">
 var path = `path("M300.358,297.675c55.955,57.158 83.03,107.698 141.392,107.698c58.362,0 105.292,-46.93 105.292,-105.292c0,-58.361 -46.93,-105.893 -105.292,-105.292c-58.362,0.602 -80.022,43.321 -132.969,102.886c-53.549,52.947 -94.462,107.698 -152.824,107.698c-58.362,0 -105.292,-46.93 -105.292,-105.292c0,-58.361 46.93,-105.292 105.292,-105.292c58.362,0 98.072,55.956 144.401,102.886Z")`;
 var p = document.getElementById('cat2');
 var animation = p.animate({
@@ -480,76 +356,92 @@ var animation = p.animate({
 	duration: 4000, 
 	iterations: Infinity
 });</code></pre>
-					</section>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Can I use?</h1>
 				</section>
 				<section>
-					<section>
-						<h1>Utilizzarle oggi?</h1>
-					</section>
-					<section>
-						<img src="./images/caniuse.png" alt="">
-					</section>
-					<section>
-						<h2>Ma abbiamo un <a href="https://github.com/web-animations/web-animations-js" target="_blank">polyfill</a></h2>
-						<small>
-							e tranquilli che c'è già pronto per il vostro framework preferito
-						</small>
-					</section>
+					<img src="./images/caniuse.png" alt="">
 				</section>
 				<section>
-					<section>
-						<h1>
-							Quindi?
-						</h1>
-					</section>
-					<section>
-						<h3>Plz, possiamo usarle, facciamolo.</h3>
-						Il web non è un file .sketch o .psd, la user interface può trarre grandi vantaggi dalle animazioni
-					</section>
-					<section>
-						<img src="./images/animationUX.gif" alt="">
-					</section>
+					<h2>There is a <a href="https://github.com/web-animations/web-animations-js" target="_blank">POLYFILL</a></h2>
+					<small>
+						and for your favourite library <a href="https://github.com/bringking/react-web-animation">react-web-animation</a>
+					</small>
 				</section>
-				<section style="text-align: center">
-					<img src="./images/thanks.jpg" alt="">
+			</section>
+			<section>
+				<section>
+					<h1>
+						So?
+					</h1>
 				</section>
 				<section>
-					<h2>Bibliography</h2>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">Mozilla Developers Network</a></li>
-						<li><a href="https://www.chromestatus.com/features#animations" target="_blank">Chrome platform status</a></li>
-						<li><a href="http://danielcwilson.com/blog/2015/07/animations-intro/" target="_blank">WAAPI Tutorial</a></li>
-						<li><a href="https://pawelgrzybek.com/intro-to-the-web-animations-api/" target="_blank">Intro to WAAPI</a></li>
-						<li><a href="https://webdesigner-webdeveloper.com/weblog/exploring-web-animations/" target="_blank">Exploring WAAPI</a></li>
-						<li><a href="https://medium.com/ux-in-motion/creating-usability-with-motion-the-ux-in-motion-manifesto-a87a4584ddc" target="_blank">Motion in UX</a></li>
-					</ul>
+					<h3>Plz, we can use them, let's do it.</h3>
+					Web is not a .sketch or .psd file,
+					Animations can really improve the experience
 				</section>
-			</div>
+				<section>
+					<img src="./images/animationUX.gif" alt="">
+				</section>
+			</section>
+			<section style="text-align: center">
+				<img src="./images/thanks.jpg" alt="">
+			</section>
+			<section>
+				<h2>Bibliography</h2>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">Mozilla Developers
+							Network</a></li>
+					<li><a href="https://www.chromestatus.com/features#animations" target="_blank">Chrome platform status</a></li>
+					<li><a href="http://danielcwilson.com/blog/2015/07/animations-intro/" target="_blank">WAAPI Tutorial</a></li>
+					<li><a href="https://pawelgrzybek.com/intro-to-the-web-animations-api/" target="_blank">Intro to WAAPI</a></li>
+					<li><a href="https://webdesigner-webdeveloper.com/weblog/exploring-web-animations/" target="_blank">Exploring
+							WAAPI</a></li>
+					<li><a href="https://medium.com/ux-in-motion/creating-usability-with-motion-the-ux-in-motion-manifesto-a87a4584ddc"
+						 target="_blank">Motion in UX</a></li>
+				</ul>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
 
-			var confettiPlayers = [];
-			//makeItSnow();
+		var confettiPlayers = [];
+		//makeItSnow();
 
-			function makeItRain() {
+		function makeItRain() {
 			var confetti = document.querySelectorAll('.snow');
-			
+
 			if (!confetti[0].animate) {
 				return false;
 			}
@@ -558,20 +450,26 @@ var animation = p.animate({
 				var snowball = confetti[i];
 				snowball.innerHTML = '<div class="rotate"><div class="askew"></div></div>';
 				var scale = Math.random() * .8 + .2;
-				var player = snowball.animate([
-				{ transform: 'translate3d(' + (i/len*100) + 'vw,0,0) scale(' + scale + ')', opacity: scale },
-				{ transform: 'translate3d(' + (i/len*100 + 10) + 'vw,100vh,0) scale(' + scale + ')', opacity: 1 }
+				var player = snowball.animate([{
+						transform: 'translate3d(' + (i / len * 100) + 'vw,0,0) scale(' + scale + ')',
+						opacity: scale
+					},
+					{
+						transform: 'translate3d(' + (i / len * 100 + 10) + 'vw,100vh,0) scale(' + scale + ')',
+						opacity: 1
+					}
 				], {
-				duration: Math.random() * 3000 + 3000,
-				iterations: Infinity,
-				delay: -(Math.random() * 5000)
+					duration: Math.random() * 3000 + 3000,
+					iterations: Infinity,
+					delay: -(Math.random() * 5000)
 				});
-				
-				
+
+
 				confettiPlayers.push(player);
 			}
-			}
-			makeItRain();
-		</script>
-	</body>
+		}
+		makeItRain();
+	</script>
+</body>
+
 </html>
