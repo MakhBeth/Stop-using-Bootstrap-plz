@@ -1,6 +1,9 @@
 // Import React
-import React from 'react';
+import React from "react";
+import styled from "react-emotion";
+import ImageSlide from "spectacle-image-slide";
 
+import StartCat from "./images/sstart.gif";
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -12,82 +15,440 @@ import {
   Quote,
   Slide,
   Text,
-} from 'spectacle';
+  Code,
+  CodePane,
+  Appear
+} from "spectacle";
 
 // Import theme
-import createTheme from 'spectacle/lib/themes/default';
+import createTheme from "spectacle/lib/themes/default";
+
+import JSONExample from "./examples/JSON";
+import JSONAvatar from "./images/avatar.jpg";
+
+const UserCard = ({ user }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      backgroundImage: gradient,
+      padding: "2em",
+      borderRadius: "1em"
+    }}
+  >
+    <div
+      style={{
+        flexShrink: 0,
+        borderRadius: "100vw",
+        overflow: "hidden"
+      }}
+    >
+      <img style={{ display: "block" }} src={JSONAvatar} />
+    </div>
+    <div style={{ width: "100%", padding: "0 2em" }}>
+      <Heading size={6} textColor="primary" fit>
+        {user.name} {user.surname}
+      </Heading>
+      <Text
+        textColor="primary"
+        textFont="secondary"
+        textAlign="left"
+        style={{ opacity: 0.75 }}
+      >
+        @{user.nickname} - <span>Age: {user.age}</span>
+      </Text>
+      <Text textColor="primary" textAlign="left">
+        Likes:
+        {user.hobbies.map(hobbie => (
+          <Code
+            textColor="primary"
+            style={{ background: "rgba(0,0,0,0.2)", margin: "0.25em" }}
+            key={hobbie}
+          >
+            {hobbie}
+          </Code>
+        ))}
+      </Text>
+    </div>
+  </div>
+);
 
 // Require CSS
-require('normalize.css');
+require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quartenary: '#CECECE',
+    primary: "white",
+    secondary: "#1F2022",
+    tertiary: "#222d3a",
+    quartenary: "#CECECE"
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
+    primary: {
+      name: "Signika",
+      googleFont: true,
+      styles: ["700 "]
+    },
+    secondary: {
+      name: "Inconsolata",
+      googleFont: true,
+      styles: ["700 "]
+    }
   }
 );
+
+const gradient = "linear-gradient(45deg,#8496ca,#610f3c)";
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={["zoom", "slide"]}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+        <Slide transition={["zoom"]} bgGradient={gradient}>
+          <Heading textColor="primary" size={1} textAlign="left" lineHeight={1}>
+            Come fosse Gestalt, con Redux a destra
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text
+            textFont="secondary"
+            margin="20px 0 0"
+            fit
+            textColor="tertiary"
+            size={1}
+            secondary
+          >
+            Davide Di Pumpo - Codemotion Milano 2018
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
+        <Slide transition={["fade"]}>
+          <Heading textAlign="left" size={5} textFont="secondary">
+            Vedremo insieme come progettare componenti stateless, collegati
+            attraverso HOC a uno statemanager tipizzato in un app polimartica
+            che gestisce le sue rotte attraverso un prouder client.
           </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
+        </Slide>
+        <Slide bgColor="secondary">
+          <iframe
+            width="800"
+            height="600"
+            src="https://www.youtube.com/embed/thb8Ov_bW_o"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </Slide>
+        <Slide transition={["spin"]}>
+          <Heading size={1} fit>
+            Supercazzola
           </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} fit textColor="primary" caps>
+            Perché?
           </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
+        </Slide>
+        <Slide bgGradient={gradient} transition={["spin"]}>
+          <Quote textAlign="left">Design is thinking made visual</Quote>
+          <Cite textAlign="left">Saul Bass</Cite>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={2} fit>
+            <div>
+              Pensiero&nbsp;&nbsp;
+              <Appear>
+                <span>==</span>
+              </Appear>
+              => &nbsp;&nbsp;&nbsp;&nbsp;Visual
+            </div>
           </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
+        </Slide>
+        <Slide bgGradient={gradient}>
+          <Heading size={1} fit textColor="primary">
+            Postfordismo
           </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
+          <Text fit textFont="secondary">
+            Ho sempre sognato di usare questa parola in un talk
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} fit textColor="primary">
+            Pantoni
           </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+        <Slide bgColor="secondary" transition={["fade"]}>
+          <Heading size={1} textAlign="left" textColor="white">
+            Ma non ci sono solo persone nel nostro processo
+          </Heading>
+          <Text textFont="secondary" textAlign="left" textColor="white">
+            Le macchine prenderanno il nostro posto un giorno
+          </Text>
+        </Slide>
+        <Slide bgGradient={gradient}>
+          <ImageSlide image={StartCat} title="Let's start meow" />
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            JSON
+          </Heading>
+        </Slide>
+        <Slide>
+          <BlockQuote size={1}>
+            JSON (JavaScript Object Notation) is a lightweight data-interchange
+            format. It is easy for humans to read and write. It is easy for
+            machines to parse and generate.
           </BlockQuote>
+        </Slide>
+        <Slide>
+          <CodePane
+            lang="javascript"
+            textSize={30}
+            source={JSON.stringify(require("./examples/JSON").default, null, 2)}
+          />
+        </Slide>
+        <Slide>
+          <UserCard user={JSONExample} />
+        </Slide>
+        <Slide>
+          <div
+            style={{
+              maxHeight: "60vh",
+              overflow: "scroll",
+              width: "120%"
+            }}
+          >
+            <CodePane
+              textSize={20}
+              lang="javascript"
+              source={JSON.stringify(
+                require("./examples/design.config").default,
+                null,
+                2
+              )}
+            />
+          </div>
+        </Slide>
+        <Slide>
+          <ImageSlide image={require("./images/credimichange.gif")} />
+        </Slide>
+        <Slide>
+          <Heading fit>
+            <Code>Take away concept: </Code>
+            <Text>Single source of truth</Text>
+          </Heading>
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            Tipi, GraphQL e altri animali fantastici
+          </Heading>
+        </Slide>
+        <Slide>
+          <CodePane
+            textSize={40}
+            lang="graphql"
+            source={`
+    type User {
+      name: String!
+      surname: String!
+      nickname: String
+      avatar: Uri
+      age: Number
+      hobbies: [String]
+    }
+
+`}
+          />
+        </Slide>
+        <Slide>
+          <CodePane
+            textSize={40}
+            lang="graphql"
+            source={`
+    type Dashboard {
+      user: User!
+      widgets: [Widget]!
+    }
+
+`}
+          />
+        </Slide>
+        <Slide>
+          <img
+            style={{ maxWidth: "100%" }}
+            src={require("./images/graphiql.gif")}
+          />
+        </Slide>
+        <Slide>
+          <ImageSlide
+            image={require("./images/graphqlosketch.jpg")}
+            title="GraphQL x Sketch"
+          />
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            Componenti
+          </Heading>
+        </Slide>
+        <Slide>
+          <Text textAlign="left">
+            Web components are a set of web platform APIs that allow you to
+            create new custom, reusable, encapsulated HTML tags to use in web
+            pages and web apps.
+          </Text>
+        </Slide>
+        <Slide>
+          <Heading textAlign="left" size={3}>
+            Ma non parliamo di tecnologia
+          </Heading>
+          <Text textAlign="left" textFont="secondary" color="secondary">
+            Sorry Mangione
+          </Text>
+        </Slide>
+        <Slide>
+          <select>
+            <option>Prima opzione</option>
+            <option>Seconda opzione</option>
+            <option>Terza opzione</option>
+          </select>
+        </Slide>
+        <Slide>
+          <img src={require("./images/cat.gif")} />
+        </Slide>
+        <Slide>
+          <img src={require("./images/components.png")} />
+        </Slide>
+        <Slide>
+          <CodePane textSize={40} source="  <UserCard user={JSONExample} />" />
+          <br />
+          <UserCard user={JSONExample} />
+        </Slide>
+        <Slide>
+          <div
+            style={{
+              maxHeight: "60vh",
+              overflow: "scroll",
+              width: "120%"
+            }}
+          >
+            <CodePane
+              textSize={20}
+              source={`
+  <div>
+    <div>
+      <img style={{ display: "block" }} src={user.avatar} />
+    </div>
+    <div style={{ width: "100%", padding: "0 2em" }}>
+      <Heading size={6} textColor="primary" fit>
+        {user.name} {user.surname}
+      </Heading>
+      <Text
+        textColor="primary"
+        textFont="secondary"
+        textAlign="left"
+        style={{ opacity: 0.75 }}
+      >
+        @{user.nickname} - <span>Age: {user.age}</span>
+      </Text>
+      <Text textColor="primary" textAlign="left">
+        Likes:
+        {user.hobbies.map(hobbie => (
+          <Code
+            textColor="primary"
+            style={{ background: "rgba(0,0,0,0.2)", margin: "0.25em" }}
+            key={hobbie}
+          >
+            {hobbie}
+          </Code>
+        ))}
+      </Text>
+    </div>
+  </div>
+`}
+            />
+          </div>
+        </Slide>
+        <Slide>
+          <Heading lineHeight={1.4} size={3}>
+            Un componente altri non è che quello che in{" "}
+            <Code textSize={72}>Sketch</Code> chiamiamo{" "}
+            <Code textSize={72}>Symbol</Code> o che in{" "}
+            <Code textSize={72}>Framer X</Code> chiamiamo...{" "}
+            <Code textSize={72}>Component</Code>
+          </Heading>
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading textAlign="left" size={1} textColor="primary">
+            Due ultime paroline sugli attributi/proprietà di un componente
+          </Heading>
+          <br />
+          <Text textAlign="left" textFont="secondary">
+            Si, lo so che sono differenti, le unisco per onore di brevità
+          </Text>
+        </Slide>
+        <Slide>
+          Dopo un'esempietto con framer per farvi capire che intendo
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            Stato
+          </Heading>
+        </Slide>
+        <Slide>
+          <div>
+            <Heading fit>(Quasi) ogni componente ha tre stati</Heading>
+            <br />
+            <Appear>
+              <Code>Loading</Code>
+            </Appear>
+            <br />
+            <br />
+            <Appear>
+              <Code>Error</Code>
+            </Appear>
+            <br />
+            <br />
+            <Appear>
+              <Code>Ready</Code>
+            </Appear>
+          </div>
+        </Slide>
+        <Slide>
+          <Heading size={3}>
+            Senza contare lo stato generale della vostra App
+          </Heading>
+        </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            Tools
+          </Heading>
+        </Slide>
+        <Slide>
+          <ImageSlide
+            image={require("./images/credimistorybook.gif")}
+            title="Storybook"
+          />
+        </Slide>
+        <Slide>
+          <img src={require("./images/knobs.gif")} />
+        </Slide>
+        <Slide>
+          <ImageSlide
+            image={require("./images/backstop.gif")}
+            title="BackstopJS"
+          />
+        </Slide>
+        <Slide>
+          <ImageSlide image={require("./images/framer.gif")} title="Framer X" />
+        </Slide>
+        <Slide>
+          <ImageSlide
+            image={require("./images/thankyou.gif")}
+            title="thankyou"
+          />
+        </Slide>
+        <Slide>
+          <CodePane source={JSON.stringify({}, null, 2)} />
         </Slide>
       </Deck>
     );
