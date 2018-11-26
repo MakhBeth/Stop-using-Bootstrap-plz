@@ -441,6 +441,26 @@ export default class Presentation extends React.Component {
         <Slide>
           <ImageSlide image={require("./images/framer.gif")} title="Framer X" />
         </Slide>
+        <Slide bgGradient={gradient} transition={["fade"]}>
+          <Heading size={1} textColor="primary">
+            RECAP
+          </Heading>
+        </Slide>
+        <Slide>
+          <ul>
+            <li>
+              Cercate di parlare la stessa lingua dei vostri interlocutori
+            </li>
+            <li>
+              Definite un linguaggio comune, JSON e i Tipi non sono poi così
+              male anche per le macchine
+            </li>
+            <li>
+              Il processo per il quale si fa reverse engineering dal visual allo
+              sviluppo forse non è il top
+            </li>
+          </ul>
+        </Slide>
         <Slide>
           <ImageSlide
             image={require("./images/thankyou.gif")}
@@ -448,7 +468,24 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide>
-          <CodePane source={JSON.stringify({}, null, 2)} />
+          <div style={{ width: "120%;", overflow: "scroll" }}>
+            <CodePane
+              style={{ width: "150%" }}
+              lang="javascript"
+              textSize={28}
+              source={JSON.stringify(
+                {
+                  me: "Davide Di Pumpo aka @makhbeth",
+                  talk: "Come fosse Gestalt, con redux a destra",
+                  works: "Credimi",
+                  url: "https://github.com/MakhBeth/Talks/",
+                  thanks: ["Paul", "Gerry", "Velia", "Elle"]
+                },
+                null,
+                2
+              )}
+            />
+          </div>
         </Slide>
       </Deck>
     );
