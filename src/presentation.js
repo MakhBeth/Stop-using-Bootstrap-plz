@@ -149,11 +149,6 @@ export default class Presentation extends React.Component {
             Perché?
           </Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} fit textColor="primary" caps>
-            Lost in translation
-          </Heading>
-        </Slide>
         <Slide bgGradient={gradient} transition={["spin"]}>
           <Quote textAlign="left">Design is thinking made visual</Quote>
           <Cite textAlign="left">Saul Bass</Cite>
@@ -167,6 +162,11 @@ export default class Presentation extends React.Component {
               </Appear>
               => &nbsp;&nbsp;&nbsp;&nbsp;Visual
             </div>
+          </Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} fit textColor="primary" caps>
+            Lost in translation
           </Heading>
         </Slide>
         <Slide bgGradient={gradient}>
@@ -460,7 +460,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Text>
-            Partire dal visual per definire come si comporta un'oggetto, crea
+            Partire dal visual per definire come si comporta un oggetto, crea
             dei buchi d'informazione.
           </Text>
         </Slide>
@@ -473,8 +473,11 @@ export default class Presentation extends React.Component {
         <Slide>
           <Text>
             Trovate un flusso di lavoro per il quale non dobbiate mantenere più
-            source of truth contemporaneamente
+            "source of truth" contemporaneamente
           </Text>
+        </Slide>
+        <Slide>
+          <Text>Comunicate, Comunicate, Comunicate!</Text>
         </Slide>
         <Slide>
           <ImageSlide
