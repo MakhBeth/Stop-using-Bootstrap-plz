@@ -149,6 +149,11 @@ export default class Presentation extends React.Component {
             Perché?
           </Heading>
         </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} fit textColor="primary" caps>
+            Lost in translation
+          </Heading>
+        </Slide>
         <Slide bgGradient={gradient} transition={["spin"]}>
           <Quote textAlign="left">Design is thinking made visual</Quote>
           <Cite textAlign="left">Saul Bass</Cite>
@@ -447,19 +452,29 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide>
-          <ul>
-            <li>
-              Cercate di parlare la stessa lingua dei vostri interlocutori
-            </li>
-            <li>
-              Definite un linguaggio comune, JSON e i Tipi non sono poi così
-              male anche per le macchine
-            </li>
-            <li>
-              Il processo per il quale si fa reverse engineering dal visual allo
-              sviluppo forse non è il top
-            </li>
-          </ul>
+          <Text>
+            Definite un linguaggio comune, parlate la stessa lingua dei vostri
+            interlocutori, JSON e i Tipi non sono poi così male anche per le
+            macchine
+          </Text>
+        </Slide>
+        <Slide>
+          <Text>
+            Partire dal visual per definire come si comporta un'oggetto, crea
+            dei buchi d'informazione.
+          </Text>
+        </Slide>
+        <Slide>
+          <img
+            style={{ maxWidth: "100%" }}
+            src={require("./images/zeplin.png")}
+          />
+        </Slide>
+        <Slide>
+          <Text>
+            Trovate un flusso di lavoro per il quale non dobbiate mantenere più
+            source of truth contemporaneamente
+          </Text>
         </Slide>
         <Slide>
           <ImageSlide
