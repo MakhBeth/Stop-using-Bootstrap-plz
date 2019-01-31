@@ -109,7 +109,7 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={["zoom"]} bgGradient={gradient}>
           <Heading textColor="primary" size={1} textAlign="left" lineHeight={1}>
-            Come fosse Gestalt, con Redux a destra
+            Lost in translation
           </Heading>
           <Text
             textFont="secondary"
@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
             size={1}
             secondary
           >
-            Davide Di Pumpo - Codemotion Milano 2018
+            Davide Di Pumpo - Bologna Frontend Gennaio 2019
           </Text>
         </Slide>
         <Slide transition={["fade"]}>
@@ -162,11 +162,6 @@ export default class Presentation extends React.Component {
               </Appear>
               => &nbsp;&nbsp;&nbsp;&nbsp;Visual
             </div>
-          </Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} fit textColor="primary" caps>
-            Lost in translation
           </Heading>
         </Slide>
         <Slide bgGradient={gradient}>
@@ -306,9 +301,6 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={3}>
             Ma non parliamo di tecnologia
           </Heading>
-          <Text textAlign="left" textFont="secondary" color="secondary">
-            Sorry Mangione
-          </Text>
         </Slide>
         <Slide>
           <select>
