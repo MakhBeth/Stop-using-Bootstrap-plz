@@ -486,7 +486,7 @@ export default class Presentation extends React.Component {
               source={JSON.stringify(
                 {
                   me: "Davide Di Pumpo aka @makhbeth",
-                  talk: "Come fosse Gestalt, con redux a destra",
+                  talk: "Lost in translation",
                   works: "Credimi",
                   url: "https://github.com/MakhBeth/Talks/",
                   thanks: ["Paul", "Gerry", "Velia", "Elle"]
