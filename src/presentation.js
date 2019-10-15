@@ -235,7 +235,10 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
         <Slide>
-          <ImageSlide image={require("./images/credimichange.gif")} />
+          <img
+            style={{ maxWidth: "100%" }}
+            src={require("./images/credimichange.gif")}
+          />
         </Slide>
         <Slide>
           <Heading fit>
