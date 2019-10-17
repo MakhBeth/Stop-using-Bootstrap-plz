@@ -109,7 +109,7 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={["zoom"]} bgGradient={gradient}>
           <Heading textColor="primary" size={1} textAlign="left" lineHeight={1}>
-            Lost in translation
+            Come se fosse Gestalt con Redux a destra
           </Heading>
           <Text
             textFont="secondary"
@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
             size={1}
             secondary
           >
-            Davide Di Pumpo - Bologna Frontend Gennaio 2019
+            Davide Di Pumpo - Como CaFE Ottobre 2019
           </Text>
         </Slide>
         <Slide transition={["fade"]}>
@@ -230,7 +230,10 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
         <Slide>
-          <ImageSlide image={require("./images/credimichange.gif")} />
+          <img
+            style={{ maxWidth: "100%" }}
+            src={require("./images/credimichange.gif")}
+          />
         </Slide>
         <Slide>
           <Heading fit>
